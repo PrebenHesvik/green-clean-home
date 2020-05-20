@@ -1,0 +1,76 @@
+$_button-background-color: $accent-color;
+$_button-background-color-hover: shade($accent-color, 20%);
+
+#{$all-buttons} {
+    appearance: none;
+    border: 0;
+    border-radius: $base-border-radius;
+    color: $base-font-color;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $base-font-family;
+    font-size: modular-scale(-1);
+    -webkit-font-smoothing: antialiased;
+    font-weight: 500;
+    line-height: 1;
+    margin: 0;
+    overflow: visible;
+    padding: 0.4rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: background-color $base-duration $base-timing;
+    user-select: none;
+    vertical-align: middle;
+    -webkit-appearance: button;
+    white-space: nowrap;
+
+    &:hover {
+        @include transform(scale(1.03));
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.18);
+    }
+
+    &:focus {
+        @include transform(scale(1));
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        &:hover {
+            background-color: $_button-background-color;
+        }
+    }
+    @include mq(mobile-3) {
+        padding: 0.6rem 1.3rem;
+        font-size: modular-scale(0);
+    }
+}
+
+.btn {
+    border: 2px solid $secondary-accent-color;
+}
+.btn-transparent {
+    background: transparent;
+}
+.btn-block {
+    width: 100%;
+}
+
+.button-send {
+    background: $accent-color;
+    border-radius: 3px;
+    color: $white;
+    padding: 10px 20px;
+    border: none;
+    font-size: modular-scale(1);
+    font-weight: 500;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}

@@ -1,0 +1,49 @@
+// Colors
+$primary-color: #1c1f24;
+$secondary-color: #f2f2f2;
+$tertiary-color: #000000;
+$quaternary-color: #5b6073;
+
+//accent-colors
+$primary-accent-color: #d75813;
+$secondary-accent-color: #ab0000;
+$tertiary-accent-color: #87bcde;
+$quaternary-accent-color: #88a2aa;
+$another-accent-color: #579caa;
+
+// Typography
+$base-font-family: 'Roboto', 'sans-serif';
+$heading-font-family: 'Open Sans', 'sans-serif';
+
+// Line height
+$base-line-height: 1.6;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 2px;
+
+$xl-spacing: 7.2rem;
+$large-spacing: 6.4rem;
+$medium-spacing: 3.2rem;
+$base-spacing: 1.6rem;
+$small-spacing: $base-spacing / 2;
+$xs-spacing: $base-spacing / 4;
+
+//Font-styling
+$text-shadow: 0 1px 2px rgba(225, 225, 225, 0.5);
+$text-opacity: 0.9;
+
+// Border
+$primary-border-color: darken($secondary-color, 20%);
+
+$base-box-shadow: 2px 2px 3px rgba(225, 225, 225, 0.1);
+
+// Focus
+$focus-outline-color: transparentize($primary-accent-color, 0.4);
+$focus-outline-width: 3px;
+$focus-outline: $focus-outline-width solid $focus-outline-color;
+$focus-outline-offset: 2px;
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
