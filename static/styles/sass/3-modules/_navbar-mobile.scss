@@ -1,0 +1,78 @@
+//////////////////////////////////////////////////
+///    NAVBAR FOR FOR MOBILE SCREEN SIZES      ///
+//////////////////////////////////////////////////
+
+.toggle-nav {
+  font-size: 1.5rem;
+  z-index: z-index(logo);
+  top: 2.5rem;
+  right: 2.5rem;
+  position: absolute;
+
+  @include breakpoint(viewport-4) {
+    font-size: 1.7rem;
+  }
+
+  @include breakpoint(viewport-7) {
+    display: none;
+  }
+}
+
+.navbar-mobile {
+  background: url('../../images/menu_mobile_background.jpg');
+  display: none;
+  position: fixed;
+  color: $font-color-2;
+  z-index: z-index(navbar);
+  height: 100vh;
+
+  &__header {
+    display: block;
+    text-align: center;
+    margin: 10rem 2.5rem 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: $font-color-2;
+  }
+
+  &__subtitle {
+    color: $accent-color-2;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__links {
+    display: block;
+    text-align: left;
+    margin-left: 10%;
+  }
+
+  &__link {
+    padding: 0rem 0rem 2rem 2 rem;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+  }
+
+  &__link-tag {
+    @include flexbox;
+    @include align-items(center);
+  }
+
+  &__link-icon {
+    margin-right: 1.5rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    @include flex-centered;
+    @include size(3.7rem);
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+#showcase {
+  height: 100vh;
+
+  .showcase__bg-image {
+    background: url('../../images/mobile/livingroom_mobile.jpg');
+
+    @include breakpoint(viewport-7) {
+      background: url('../../images/viewport-7/livingroom.jpg');
+    }
+    @include breakpoint(viewport-9) {
+      background: url('../../images/viewport-9/livingroom-viewport-9.jpg');
+    }
+    @include breakpoint(viewport-12) {
+      background: url('../../images/viewport-12/livingroom-viewport-12.jpg');
+    }
+  }
+
+  .showcase__frame {
+    width: calc(100% - 5rem);
+    height: calc(100% - 15rem);
+    margin: 8.5rem auto 6.5rem auto;
+    border: 0.3rem solid darken($color-2, 30%);
+    padding: 3rem 5rem;
+
+    @include breakpoint(viewport-4) {
+      width: calc(100% - 20%);
+      padding: 4rem 6rem;
+    }
+
+    @include breakpoint(viewport-7) {
+      width: 100%;
+      border: none;
+      text-align: center;
+      @include flex-centered;
+      @include flex-direction(column);
+    }
+  }
+
+  .showcase__pre-title-text {
+    color: darken($color-2, 30%);
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    font-weight: 300;
+
+    @include breakpoint(viewport-4) {
+      font-size: 1.8rem;
+    }
+
+    @include breakpoint(viewport-5) {
+      display: none;
+    }
+  }
+
+  .showcase__title-text {
+    color: $secondary-color;
+    width: 7.5rem;
+    font-size: 3rem;
+    line-height: 4rem;
+    letter-spacing: 0.2rem;
+    font-weight: 700;
+
+    @include breakpoint(viewport-4) {
+      font-size: 4rem;
+      line-height: 5rem;
+    }
+
+    @include breakpoint(viewport-7) {
+      font-size: 4.5rem;
+      line-height: $primary-line-height;
+      width: 100%;
+      opacity: 0.8;
+    }
+  }
+  .showcase__text-separator {
+    height: 0.3rem;
+    width: 10rem;
+    text-align: center;
+    background: $accent-color-1;
+    opacity: 0.8;
+    display: none;
+    @include breakpoint(viewport-7) {
+      display: inline-block;
+      margin: 1rem;
+      margin-top: 1rem;
+    }
+  }
+
+  .showcase__post-title-text {
+    width: 12rem;
+    font-size: 1.8rem;
+    color: $accent-color-2;
+
+    @include breakpoint(viewport-4) {
+      font-size: 2rem;
+    }
+
+    @include breakpoint(viewport-7) {
+      width: 100%;
+      font-size: 2.8rem;
+    }
+  }
+}
+
+#section-a {
+  background-color: $bg-color-1;
+}
+
+#section-b {
+  background-color: $bg-color-2;
+}
+
+#section-d {
+  background-color: $bg-color-1;
+}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body %}
+<div class="error-page">
+    <div class="bg-image">
+        <div class="error-text">
+            <p class="error-type">400</p>
+            <p class="error-message">Mission aborted</p>
+        </div>
+        <a href="{% url 'home:index' %}">
+            <button id="btn-about-us" type="button" class="btn btn-transparent">  
+            Go to home
+            </button>   
+        </a>
+    </div>
+</div>
+
+{% endblock %}

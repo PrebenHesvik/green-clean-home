@@ -1,0 +1,46 @@
+.section {
+  padding: 10% 5%;
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+
+  @include breakpoint(viewport-9) {
+    padding: 7% 10%;
+  }
+  @include breakpoint(viewport-14) {
+    padding: 4% 10%;
+  }
+
+  &__title {
+    margin-bottom: $medium-spacing;
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+  }
+
+  &__title-text {
+    font-size: 3rem;
+    color: $font-color-3;
+
+    @include breakpoint(viewport-7) {
+      font-size: 4rem;
+    }
+  }
+
+  &__title-line {
+    height: 3px;
+    width: 50px;
+    background: $accent-color-2;
+  }
+
+  .content {
+    @include flexbox;
+    @include flex-direction(column);
+    @include align-items(center);
+    width: 100%;
+
+    @include breakpoint(viewport-12) {
+      max-width: 75%;
+    }
+  }
+}

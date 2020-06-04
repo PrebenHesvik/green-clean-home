@@ -1,8 +1,14 @@
 html {
   font-size: 62.5%;
-  color: $secondary-color;
-  font-family: $base-font-family;
-  line-height: $base-line-height;
+  scroll-behavior: smooth;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+p {
+  color: $font-color-1;
+  font-family: $primary-font-family;
+  line-height: $primary-line-height;
 }
 
 // Heading styles
@@ -12,9 +18,9 @@ h3,
 h4,
 h5,
 h6 {
-  color: $secondary-color;
-  font-family: $heading-font-family;
-  line-height: $heading-line-height;
+  font-family: $secondary-font-family;
+  line-height: $secondary-line-height;
+  text-transform: uppercase;
 }
 
 //LINKS
@@ -22,7 +28,6 @@ a {
   background-color: transparent;
   text-decoration: none;
   transition: color $base-duration $base-timing;
-  color: $secondary-color;
 
   &:hover {
     outline: 0;

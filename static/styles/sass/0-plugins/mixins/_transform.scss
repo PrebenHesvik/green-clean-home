@@ -1,0 +1,33 @@
+/* The CSS transform property lets you modify the coordinate space of the CSS visual formatting model. Using it, elements can be translated, rotated, scaled, and skewed according to the values set
+
+The transform-origin CSS property lets you modify the origin for transformations of an element.
+
+The transform-style CSS property determines if the children of the element are positioned in the 3D-space or are flattened in the plane of the element.
+
+@include transform(translateY(50px));
+@include transform(scale(0.9) rotate(-3deg));
+@include transform-origin(center top);
+@include transform-style(preserve-3d);
+
+*/
+
+@mixin transform($property: none) {
+
+  // none | <transform-function>
+  @include prefixer(transform, $property, webkit moz ms o spec);
+}
+
+@mixin transform-origin($axes: 50%) {
+  @include _bourbon-deprecate-for-prefixing("transform-origin");
+
+  // x-axis - left | center | right  | length | %
+  // y-axis - top  | center | bottom | length | %
+  // z-axis -                          length
+  @include prefixer(transform-origin, $axes, webkit moz ms o spec);
+}
+
+@mixin transform-style($style: flat) {
+  @include _bourbon-deprecate-for-prefixing("transform-style");
+
+  @include prefixer(transform-style, $style, webkit moz ms o spec);
+}

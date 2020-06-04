@@ -1,0 +1,24 @@
+//////////////////////////////////////////////////
+///  SASS MAP FOR DETERMINING Z-INDEX          ///
+///  FUNCTION FOR IT IS FOUND IN MIXINS        ///
+//////////////////////////////////////////////////
+
+$z-layers: (
+  bottom: -9999,
+  default: 1,
+  dropdown: 3000,
+  overlay: 4000,
+  modal: 4001,
+  navbar: 5000,
+  logo: 6000,
+  top: 10000,
+);
+
+@function z-index($key) {
+  @if map-has-key($z-layers, $key) {
+    @return map-get($z-layers, $key);
+  }
+
+  @warn "Unknown `#{$key}` in $z-layers.";
+  @return null;
+}

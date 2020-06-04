@@ -14,16 +14,137 @@
   </head>
 
   <body>
-    <script type="text/javascript" src="{% static 'scripts/jquery-3.2.1.min.js' %}"></script>
+    <nav>
+      <a href="" class="toggle-nav">
+        <span><i class="fas fa-bars"></i></span>
+      </a>
+      <!-- mobile nav -->
+      <div class="navbar-mobile | bg-image">
+        <!-- Mobile navbar title -->
+        <div class="navbar-mobile__header">
+          <h2 class="navbar-mobile__title">Green Clean Home</h2>
+          <p class="navbar-mobile__subtitle">Eco-Friendly Cleaning</p>
+        </div>
+        <!-- Mobile navbar links -->
+        <ul class="navbar-mobile__links | active">
+          <!-- Home link -->
+          <li class="navbar-mobile__link">
+            <a href="" class="navbar-mobile__link-tag">
+              <span class="navbar-mobile__link-icon">
+                <i class="fas fa-home"></i>
+              </span>
+              <span>Home</span>
+            </a>
+          </li>
+          <!-- Rates & Services link -->
+          <li class="navbar-mobile__link">
+            <a href="" class="navbar-mobile__link-tag">
+              <span class="navbar-mobile__link-icon">
+                <i class="fas fa-paint-brush"></i>
+              </span>
+              <span>Rates & Services</span>
+            </a>
+          </li>
+          <!-- Contact Us link -->
+          <li class="navbar-mobile__link">
+            <a href="" class="navbar-mobile__link-tag">
+              <span class="navbar-mobile__link-icon">
+                <i class="fas fa-phone"></i>
+              </span>
+              <span>Contact Us</span>
+            </a>
+          </li>
+          <!-- About Us link -->
+          <li class="navbar-mobile__link">
+            <a href="" class="navbar-mobile__link-tag">
+              <span class="navbar-mobile__link-icon">
+                <i class="fas fa-heart"></i>
+              </span>
+              <span>About Us</span>
+            </a>
+          </li>
+          <!-- FAQ link -->
+          <li class="navbar-mobile__link">
+            <a href="" class="navbar-mobile__link-tag">
+              <span class="navbar-mobile__link-icon">
+                <i class="fas fa-question"></i>
+              </span>
+              <span>Frequently Asked Questions</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <!-- End of mobile navbar -->
+
+      <!-- Start of regular navbar -->
+      <div class="navbar">
+        <ul class="navbar__links">
+          <li class="navbar__link">
+            <a href="" class="navbar__link-tag | navbar-home | enabled">Home</a>
+          </li>
+          <li class="navbar__link">
+            <a href="" class="navbar__link-tag | enabled">Rates & Services</a>
+          </li>
+          <li class="navbar__link">
+            <a href="" class="navbar__link-tag | disabled">Contact Us</a>
+          </li>
+          <li class="navbar__link">
+            <a href="" class="navbar__link-tag | disabled">About Us</a>
+          </li>
+          <li class="navbar__link">
+            <a href="" class="navbar__link-tag | disabled">FAQ</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    {% block body %} {% endblock %}
+    <footer class="">
+      <div class="footer__top">
+        <!-- footer title -->
+        <div class="footer-title">
+          <h2 class="footer-title__title">Green Clean Home</h2>
+          <p class="footer-title__subtitle">Eco-Friendly Cleaning</p>
+          <p class="footer-title__line"></p>
+        </div>
+        <!-- footer links -->
+        <ul class="footer__links">
+          <li class="footer__links__link">
+            <a href="" class="">Home</a>
+          </li>
+          <li class="footer__links__link">
+            <a href="">Rates & Services</a>
+          </li>
+          <li class="footer__links__link">
+            <a href="">Contact Us</a>
+          </li>
+          <li class="footer__links__link">
+            <a href="">About Us</a>
+          </li>
+          <li class="footer__links__link">
+            <a href="">FAQ</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-bottom">
+        <div class="terms-conditions">
+          <p>2020 Green Clean Home. All rights reserved.</p>
+        </div>
+        <div class="signature">
+          <p class="designed-by">
+            Designed and developed by <span class="my-site">prebenhesvik.com</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <script src="{% static 'scripts/click-scroll.js' %}"></script>
+    <!-- <script src="{% static 'scripts/click-scroll.js' %}"></script> -->
     <!-- <script src="{% static 'scripts/form-validation.js' %}"></script> -->
-    <script src="{% static 'scripts/submit-form.js' %}"></script>
-    <script type="text/javascript" src="{% static 'scripts/tabs.js' %}"></script>
-    <script type="text/javascript" src="{% static 'scripts/scripts.js' %}"></script>
+    <!-- <script src="{% static 'scripts/submit-form.js' %}"></script> -->
+    <!-- <script type="text/javascript" src="{% static 'scripts/tabs.js' %}"></script> -->
     <script type="text/javascript" src="{% static 'scripts/main.js' %}"></script>
   </body>
 </html>

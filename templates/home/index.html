@@ -1,222 +1,214 @@
 {% extends "base.html" %} {% block body %}
-
+<!-- Showcase start -->
 <div id="showcase">
-  <div class="bg-image">
-    <div class="frame">
-      <div class="heading heading-showcase">
-        <p class="pre-title pre-title-showcase">Welcome to</p>
-        <h1 class="title-showcase">Green Home And Office</h1>
-        <p class="header-line-showcase"></p>
-        <p class="post-title post-title-showcase">Eco-Friendly Cleaning</p>
+  <div class="showcase__bg-image | bg-image">
+    <div class="showcase__frame">
+      <div class="showcase__title">
+        <h5 class="showcase__pre-title-text">Welcome to</h5>
+        <h1 class="showcase__title-text">Green Clean Homes</h1>
+        <p class="showcase__text-separator"></p>
+        <p class="showcase__post-title-text">Eco-Friendly Cleaning</p>
       </div>
     </div>
   </div>
 </div>
-<!-- <div class="section-width section-layout section-a">
-    <div class="section-title">
-        <h5 class="pre-title">Together </h5>
-        <h2 class="main-title">Our mission</h2>
-        <p class="header-line"></p>
+<!-- Showcase end -->
+
+<!-- Section - Our Mission  -->
+<div id="section-a" class="section">
+  <div class="section__title">
+    <h2 class="section__title-text">Our mission</h2>
+    <p class="section__title-line"></p>
+  </div>
+  <div class="content">
+    <div class="text-box">
+      <p class="text-box__text">
+        At Green Home and Office, eco-friendly practices aren't just a fad, they are how we've done
+        business from the start. We operate in an environmentally responsible way and use cleaning
+        methods that are safe for our clients, safe for their families and safe for pets and the
+        planet.
+      </p>
+      <p class="text-box__text">
+        We help you take the pressure off and leave you to do more of the things you love. We'd be
+        honored to have your business and do our parts together.
+      </p>
     </div>
-    <div class="content">
-        <p class="paragraph-text">At Green Home and Office, eco-friendly practices aren't just a fad, they are how we've done business from the start. We operate in an environmentally responsible way and use cleaning methods that are safe for our clinets, safe for their families and safe for pets and the planet.elp you take the pressure off and leave you to do more of the things you love. </p>
-        <p class="paragraph-text">We'd be honored to have your business and do our parts together.</p>
+  </div>
+</div>
+
+<!-- About Us section -->
+<div id="section-b" class="section">
+  <div class="section__title">
+    <h2 class="section__title-text">About Us</h2>
+    <p class="section__title-line"></p>
+  </div>
+  <div class="content">
+    <ul class="cards">
+      <li class="card">
+        <div class="card__icon-group">
+          <span class="card__icon">
+            <i class="fas fa-users"></i>
+          </span>
+        </div>
+        <div class="card__text">
+          <h3 class="card__heading">Three and four person teams</h3>
+          <p class="card__paragraph">Licensed, insured and bonded for ease of mind.</p>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card__icon-group">
+          <span class="card__icon">
+            <i class="fas fa-map-marker"></i>
+          </span>
+        </div>
+        <div class="card__text">
+          <h3 class="card__heading">Service area includes VA, MD, DC</h3>
+          <p class="card__paragraph">
+            See <a href="" class="accent-2">list</a> of cities we serve.
+          </p>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card__icon-group">
+          <span class="card__icon">
+            <i class="fas fa-brush"></i>
+          </span>
+        </div>
+        <div class="card__text">
+          <h3 class="card__heading">Home and office cleaning services</h3>
+          <p class="card__paragraph">
+            Standard or customized options to choose from. Check out our routine cleaning.
+          </p>
+        </div>
+      </li>
+
+      <li class="card">
+        <div class="card__icon-group">
+          <span class="card__icon">
+            <i class="fas fa-credit-card"></i>
+          </span>
+        </div>
+        <div class="card__text">
+          <h3 class="card__heading">Ease of payment</h3>
+          <p class="card__paragraph">
+            Major credit cards, checks and cash accepted at time of service for ease of payment.
+          </p>
+        </div>
+      </li>
+    </ul>
+    <!-- Button -->
+    <a href="">
+      <button id="btn-about-us" type="button" class="btn">
+        Read More
+      </button>
+    </a>
+  </div>
+</div>
+<div id="section-d" class="section">
+  <div class="section__title">
+    <h2 class="section__title-text">Contact Us</h2>
+    <p class="section__title-line"></p>
+  </div>
+  <div class="content">
+    <div class="contact-us">
+      <div class="left-side">
+        <ul class="contact-cards">
+          <li class="contact-card">
+            <span class="contact-card__icon">
+              <i class="fas fa-phone"></i>
+            </span>
+            <div class="contact-card__text">
+              <h3 class="contact-card__heading">{{ phone}}</h3>
+            </div>
+          </li>
+          <li class="contact-card">
+            <span class="contact-card__icon">
+              <i class="fas fa-envelope"></i>
+            </span>
+            <div class="contact-card__text">
+              <h3 class="contact-card__heading">{{ email}}</h3>
+            </div>
+          </li>
+          <li class="contact-card">
+            <span class="contact-card__icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </span>
+            <div class="contact-card__text">
+              <h3 class="contact-card__heading">300 Montgomery Avenue, 102B,</h3>
+              <h3 class="contact-card__heading">Bethesda, Maryland 20814</h3>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- <ul class="cards">
+      <li class="card">
+        <div class="card__icon-group">
+          <span class="card__icon">
+            <i class="fas fa-phone"></i>
+          </span>
+        </div>
+        <div class="card__text">
+          <h3 class="card__heading">{{ phone}}</h3>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card__icon-group">
+          <span class="card__icon">
+            <i class="fas fa-envelope"></i>
+          </span>
+        </div>
+        <div class="card__text">
+          <h3 class="card__heading">{{ email }}</h3>
+        </div>
+      </li>
+      <li class="card">
+        <div class="card__icon-group">
+          <span class="card__icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+        </div>
+        <div class="card__text">
+
+        </div>
+      </li>
+    </ul> -->
+      <!-- Contact form -->
+      <div class="contact-form">
+        <h3 class="contact-form__heading">Leave us a message</h3>
+        <form
+          id="contact-form"
+          action="/submit_form/"
+          class=""
+          method="POST"
+          enctype="multipart/form-data"
+          data-url=""
+        >
+          {% csrf_token %} {% for field in form %} {% if field.errors %}
+          <div class="flex-form-group">
+            {{ field }}
+            <span class="focus-border">
+              <i></i>
+            </span>
+            <p class="help-inline">
+              {% for error in field.errors %} {{ error }} {% endfor %}
+            </p>
+          </div>
+          {% else %}
+          <div class="flex-form-group">
+            {{ field }}
+            <span class="focus-border">
+              <i></i>
+            </span>
+          </div>
+          {% endif %} {% endfor %}
+          <button id="" type="submit" value="submit" class="btn btn-block button-send">
+            <span class="button-text">Send</span>
+          </button>
+        </form>
+      </div>
     </div>
+  </div>
 </div>
-<div class="section-width section-layout section-b">
-    <div class="section-title">
-        <h5 class="pre-title">Briefly </h5>
-        <h2 class="main-title">About Us</h2>
-        <p class="header-line"></p>
-    </div>
-    <div class="content">
-        <div class="card">
-            <div class="card-icon">
-                <span class="fa-stack fa-2x">
-                <i class="fa fa-circle fa-stack-2x icon-circle"></i>
-                <i class="fa fa-users fa-stack-1x"></i>
-                </span>
-            </div>
-            <div class="card-text">
-                <h3 class="card-heading">Three and four person professional trained teams.</h3>
-                <p class="card-paragraph"> Licensed, insured and bonded for ease of mind.</p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-icon">
-                <span class="fa-stack fa-2x">
-                <i class="fa fa-circle fa-stack-2x icon-circle"></i>
-                <i class="fa fa-paint-brush fa-stack-1x"></i>
-                </span>
-            </div>
-            <div class="card-text">
-                <h3 class="card-heading">Home and office cleaning services.</h3>
-                <p class="card-paragraph"> Standard or customized options to choose from. Check out our routine cleaning <a href="{% url 'rates:index' %}#our-services" onclick="resetHref();" class="accent-2">checklist.</a> </p>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card-icon">
-                <span class="fa-stack fa-2x">
-                <i class="fa fa-circle fa-stack-2x icon-circle"></i>
-                <i class="fa fa-map-marker fa-stack-1x"></i>
-                </span>
-            </div>
-            <div class="card-text">
-                <h3 class="card-heading">Our service area includes VA, MD and DC.</h3>
-                <p class="card-paragraph"> See <a href="{% url 'rates:index' %}#service-area" class="accent-2">list</a> of cities we serve.</p>
-            </div>
-        </div>
-        <div class="card">
-                <div class="card-icon">
-                    <span class="fa-stack fa-2x">
-                    <i class="fa fa-circle fa-stack-2x icon-circle"></i>
-                    <i class="fa fa-credit-card fa-stack-1x"></i>
-                    </span>
-                </div>
-                <div class="card-text">
-                    <h5 class="card-heading">Ease of payment</h5>
-                    <p class="card-paragraph">Major credit cards, checks and cash accepted at time of service for ease of payment.</p>
-                </div>
-            </div>
-        <a href="{% url 'about:index' %}">
-            <button id="btn-about-us" type="button" class="btn btn-transparent">
-            Read More
-            </button>
-        </a>
-
-    </div>
-</div>
-<div class="image image-bedroom">
-    <p class="image-text">Get the rest you need</p>
-</div>
-<div class="section-width section-layout section-c">
-        <div class="section-title">
-            <h5 class="pre-title">Our Customers </h5>
-            <h2 class="main-title">Praise Us</h2>
-            <p class="header-line"></p>
-        </div>
-        <div class="content">
-            <div class="carousel">
-                <input type="radio" id="carousel-1" name="carousel[]" checked>
-                <input type="radio" id="carousel-2" name="carousel[]">
-                <input type="radio" id="carousel-3" name="carousel[]">
-                <input type="radio" id="carousel-4" name="carousel[]">
-                <input type="radio" id="carousel-5" name="carousel[]">
-                <ul class="carousel__items">
-                    <li class="carousel__item">
-                        <div class="testimonial-card">
-                            <p class="quote">
-                                    "Green Home & Office did a superb job of cleaning my house. Everything just sparkles. Had no idea a deep cleaning could make such a difference."
-                            </p>
-                            <div class="author">
-                                <span class="name">James Stevens,</span>
-                                <span class="residence">Bethesda</span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carousel__item">
-                        <div class="testimonial-card">
-                            <p class="quote">
-                                    Lorem ipsum dolor sit amet, falli regione cu quo, quot ridens disputando at has, natum mucius intellegat in pri. Denique platonem dissentias sea.
-                            </p>
-                            <div class="author">
-                                <span class="name">Susan Colchester,</span>
-                                <span class="residence">Bethesda</span>
-                            </div>
-                        </div>
-                    </li>
-
-                </ul>
-                <div class="carousel__prev">
-                    <label for="carousel-1"></label>
-                    <label for="carousel-2"></label>
-                    <label for="carousel-3"></label>
-                    <label for="carousel-4"></label>
-                    <label for="carousel-5"></label>
-                </div>
-                <div class="carousel__next">
-                <label for="carousel-1"></label>
-                <label for="carousel-2"></label>
-                <label for="carousel-3"></label>
-                <label for="carousel-4"></label>
-                <label for="carousel-5"></label>
-                </div>
-                <div class="carousel__nav">
-                <label for="carousel-1"></label>
-                <label for="carousel-2"></label>
-                {% comment %} <label for="carousel-3"></label>
-                <label for="carousel-4"></label>
-                <label for="carousel-5"></label> {% endcomment %}
-                </div>
-            </div>
-
-        </div>
-</div>
-<div id="section-d"class="section-width section-d">
-        <div class="section-title">
-            <h5 class="pre-title">You are welcome to </h5>
-            <h2 class="main-title">Contact Us</h2>
-            <p class="header-line"></p>
-        </div>
-        <div class="content-section">
-            <div class="contact-info">
-                <div class="contact-item">
-                    <p class="contact-type">Phone</p>
-                    <p class="contact-detail">{{ phone}}</p>
-                </div>
-                <div class="contact-item">
-                    <p class="contact-type">Email</p>
-                    <p class="contact-detail">{{email}}</p>
-                </div>
-
-                <div class="contact-item">
-                    <p class="contact-type">Address</p>
-                    <p class="contact-detail">4300 Montgomery Avenue, 102B</p>
-                    <p class="contact-detail">Bethesda, Maryland 20814</p>
-                </div>
-            </div>
-            <div class="contact-form">
-                <h5 class="contact-form-header">Leave us a message</h5>
-                <div id="form-success-js" class="form-success">
-                    <p class="success-message-heading">Thank you</p>
-                    <p class="success-message-text">We will contact you as soon as possible</p>
-                </div>
-                <div id="recaptcha-failure-js" class="recaptcha-failure">
-                    <p class="recaptcha-message-heading">Please verify that you are a human</p>
-                </div>
-                <form id="contact-form" action="/submit_form/" class='' method="POST" enctype="multipart/form-data" data-url=>
-                    {% csrf_token %}
-                    {% for field in form %}
-                        {% if field.errors %}
-                            <div class="flex-form-group">
-                                {{ field }}
-                                <span class="focus-border">
-                                    <i></i>
-                                </span>
-                                <p class="help-inline">
-                                    {% for error in  field.errors %}{{ error }}{% endfor %}
-                                </p>
-                            </div>
-                        {% else %}
-                            <div class="flex-form-group">
-                                {{ field }}
-                                <span class="focus-border">
-                                    <i></i>
-                                </span>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                    <div class="g-recaptcha" data-sitekey="6LfmoUYUAAAAAEy0pcUoXRgX7JfBWFv7Kpa7jrc4"></div>
-                    <button id="" type="submit" value="submit" class="btn btn-block button-send">
-                        <span class="button-text">Send</span>
-                    </button>
-                    {% for field in form %}
-
-{% endfor %}
-                </form>
-            </div>
-        </div>
- </div>
- <div class="section-dark"></div> -->
 
 {% endblock %}

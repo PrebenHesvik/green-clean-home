@@ -1,0 +1,55 @@
+//////////////////////////////////////////////////
+///  NAVBAR FOR ALL SCREEN SIZES LARGER        ///
+///  THAN MOBILE.                              ///
+//////////////////////////////////////////////////
+
+.navbar {
+  display: none;
+
+  @include breakpoint(viewport-7) {
+    position: absolute;
+    top: 0;
+    height: 10rem;
+    width: 100%;
+    z-index: z-index(navbar);
+    @include flexbox;
+  }
+
+  &__links {
+    width: 100%;
+    @include flex-centered;
+  }
+
+  &__link {
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    font-family: $secondary-font-family;
+
+    @include breakpoint(viewport-9) {
+      font-size: 1.8rem;
+      margin: 0 1rem;
+    }
+
+    @include breakpoint(viewport-14) {
+      font-size: 2rem;
+      margin: 0 1.5rem;
+    }
+  }
+
+  a {
+    opacity: 0.8;
+    color: $secondary-color;
+  }
+
+  a.active {
+    padding-bottom: 0.5rem;
+    border-bottom: 0.3rem solid $accent-color-2;
+    opacity: 1;
+  }
+
+  a:hover {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,27 @@
+.text-box {
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(flex-start);
+  width: 100%;
+
+  @include breakpoint(viewport-7) {
+    @include flex-direction(row);
+    @include justify-content(space-between);
+  }
+}
+
+.text-box__text {
+  font-weight: 300;
+  margin-bottom: $base-spacing;
+  font-size: 1.7rem;
+
+  @include breakpoint(viewport-7) {
+    font-size: 1.9rem;
+    flex-basis: 45%;
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(viewport-12) {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,93 @@
+.cards {
+  width: 100%;
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-content(center);
+  @include align-items(stretch);
+  margin-bottom: 3rem;
+
+  @include breakpoint(viewport-7) {
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    @include justify-content(space-between);
+    @include align-items(stretch);
+  }
+}
+.card {
+  background: $green-light;
+  border: 1px solid $green-border-light;
+  margin: 0.5rem 0;
+  box-shadow: 2px 2px 3px rgba(88, 87, 87, 0.2);
+  @include flexbox;
+
+  @include breakpoint(viewport-7) {
+    min-width: 0;
+    flex-basis: 49%;
+  }
+
+  @include breakpoint(viewport-9) {
+    flex-basis: 49%;
+  }
+
+  .card__icon-group {
+    @include flexbox;
+    @include flex-centered;
+    padding: 15px 20px;
+    background: $green-regular;
+  }
+
+  .card__icon {
+    border-radius: 50%;
+    border: 1px solid $color-2;
+    @include flex-centered;
+    @include size(4.2rem);
+
+    i {
+      font-size: 2rem;
+      color: $color-2;
+    }
+  }
+
+  .card__text {
+    @include flexbox;
+    @include flex-direction(column);
+    padding: 15px 20px;
+  }
+
+  .card__heading {
+    font-size: 1.3rem;
+    color: $font-color-3;
+
+    @include breakpoint(viewport-9) {
+      font-size: 1.4rem;
+    }
+
+    @include breakpoint(viewport-12) {
+      font-size: 1.6rem;
+    }
+
+    @include breakpoint(viewport-14) {
+      font-size: 1.8rem;
+    }
+  }
+
+  .card__paragraph {
+    font-size: 1.3rem;
+    color: $font-color-1;
+    margin-top: $small-spacing;
+    font-weight: 400;
+
+    @include breakpoint(viewport-9) {
+      font-size: 1.4rem;
+    }
+
+    @include breakpoint(viewport-12) {
+      font-size: 1.6rem;
+    }
+
+    a {
+      color: $accent-color-2;
+      font-weight: 600;
+    }
+  }
+}
