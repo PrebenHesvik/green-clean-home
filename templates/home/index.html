@@ -5,7 +5,7 @@
     <div class="showcase__frame">
       <div class="showcase__title">
         <h5 class="showcase__pre-title-text">Welcome to</h5>
-        <h1 class="showcase__title-text">Green Clean Homes</h1>
+        <h1 class="showcase__title-text">Green Clean Home</h1>
         <p class="showcase__text-separator"></p>
         <p class="showcase__post-title-text">Eco-Friendly Cleaning</p>
       </div>
@@ -62,10 +62,8 @@
           </span>
         </div>
         <div class="card__text">
-          <h3 class="card__heading">Service area includes VA, MD, DC</h3>
-          <p class="card__paragraph">
-            See <a href="" class="accent-2">list</a> of cities we serve.
-          </p>
+          <h3 class="card__heading">We serve greater San Antonio area</h3>
+          <p class="card__paragraph"><a href="" class="accent-2">list</a> of cities we serve.</p>
         </div>
       </li>
       <li class="card">
@@ -77,7 +75,7 @@
         <div class="card__text">
           <h3 class="card__heading">Home and office cleaning services</h3>
           <p class="card__paragraph">
-            Standard or customized options to choose from. Check out our routine cleaning.
+            Standard or customized options to choose from.
           </p>
         </div>
       </li>
@@ -91,7 +89,7 @@
         <div class="card__text">
           <h3 class="card__heading">Ease of payment</h3>
           <p class="card__paragraph">
-            Major credit cards, checks and cash accepted at time of service for ease of payment.
+            Major credit cards, cash and bitcoin accepted.
           </p>
         </div>
       </li>
@@ -111,71 +109,39 @@
   </div>
   <div class="content">
     <div class="contact-us">
-      <div class="left-side">
-        <ul class="contact-cards">
-          <li class="contact-card">
-            <span class="contact-card__icon">
+      <div class="contact-us__info">
+        <ul class="contact-us__details">
+          <li class="contact-us__detail">
+            <span class="icon">
               <i class="fas fa-phone"></i>
             </span>
             <div class="contact-card__text">
-              <h3 class="contact-card__heading">{{ phone}}</h3>
+              <h3 class="heading">{{ phone}}</h3>
             </div>
           </li>
-          <li class="contact-card">
-            <span class="contact-card__icon">
+          <li class="contact-us__detail">
+            <span class="icon">
               <i class="fas fa-envelope"></i>
             </span>
             <div class="contact-card__text">
-              <h3 class="contact-card__heading">{{ email}}</h3>
+              <h3 class="heading">{{ email}}</h3>
             </div>
           </li>
-          <li class="contact-card">
-            <span class="contact-card__icon">
+          <li class="contact-us__detail">
+            <span class="icon">
               <i class="fas fa-map-marker-alt"></i>
             </span>
             <div class="contact-card__text">
-              <h3 class="contact-card__heading">300 Montgomery Avenue, 102B,</h3>
-              <h3 class="contact-card__heading">Bethesda, Maryland 20814</h3>
+              <h3 class="heading">5100 USAA Blvd</h3>
+              <h3 class="heading">San Antonio, TX 78240</h3>
             </div>
           </li>
         </ul>
       </div>
 
-      <!-- <ul class="cards">
-      <li class="card">
-        <div class="card__icon-group">
-          <span class="card__icon">
-            <i class="fas fa-phone"></i>
-          </span>
-        </div>
-        <div class="card__text">
-          <h3 class="card__heading">{{ phone}}</h3>
-        </div>
-      </li>
-      <li class="card">
-        <div class="card__icon-group">
-          <span class="card__icon">
-            <i class="fas fa-envelope"></i>
-          </span>
-        </div>
-        <div class="card__text">
-          <h3 class="card__heading">{{ email }}</h3>
-        </div>
-      </li>
-      <li class="card">
-        <div class="card__icon-group">
-          <span class="card__icon">
-            <i class="fas fa-map-marker-alt"></i>
-          </span>
-        </div>
-        <div class="card__text">
-
-        </div>
-      </li>
-    </ul> -->
       <!-- Contact form -->
-      <div class="contact-form">
-        <h3 class="contact-form__heading">Leave us a message</h3>
+      <div class="contact-us__form">
+        <h3 class="form__heading">Leave us a message</h3>
         <form
           id="contact-form"
           action="/submit_form/"
@@ -202,10 +168,59 @@
             </span>
           </div>
           {% endif %} {% endfor %}
-          <button id="" type="submit" value="submit" class="btn btn-block button-send">
+          <button id="" type="submit" value="submit" class="btn-block button-send">
             <span class="button-text">Send</span>
           </button>
         </form>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of section-d -->
+
+<!-- Start of section-e -->
+<div id="section-e" class="section">
+  <div class="section__title">
+    <h2 class="section__title-text">Pricing</h2>
+    <p class="section__title-line"></p>
+  </div>
+  <div class="content">
+    <div class="price-calc">
+      <!-- House type -->
+      <div class="select-wrapper">
+        <span class="absolute"><i class="fas fa-angle-down"></i></span>
+        <select name="" id="house-type" class="get-quote">
+          <option value="Studio" selected>Studio</option>
+          <option value="1 bedroom">1 bedroom</option>
+          <option value="2 bedrooms">2 bedrooms</option>
+          <option value="3 bedrooms">3 bedrooms</option>
+          <option value="4 bedrooms">4 bedrooms</option>
+          <option value="5 bedrooms">5 bedrooms</option>
+        </select>
+      </div>
+      <!-- Number of bathrooms -->
+      <div class="select-wrapper">
+        <span class="absolute"><i class="fas fa-angle-down"></i></span>
+        <select name="" id="bathroom" class="get-quote">
+          <option value="1 bathroom" selected>1 bathroom</option>
+          <option value="2 bathrooms">2 bathrooms</option>
+          <option value="3 bathrooms">3 bathrooms</option>
+          <option value="4 bathrooms">4 bathrooms</option>
+          <option value="5 bathrooms">5 bathrooms</option>
+        </select>
+      </div>
+      <!-- Cleaning type -->
+      <div class="select-wrapper">
+        <span class="absolute"><i class="fas fa-angle-down"></i></span>
+        <select name="" id="cleaning-type" class="get-quote">
+          <option value="Standard" selected>Standard</option>
+          <option value="Standard Plus">Standard Plus</option>
+          <option value="Deep Clean">Deep Clean</option>
+          <option value="Moving in/out">Moving in/out</option>
+        </select>
+      </div>
+      <div class="price-box">
+        {% include 'home/includes/price.html' %}
       </div>
     </div>
   </div>

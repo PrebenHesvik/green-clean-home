@@ -1,27 +1,25 @@
-footer {
-  background: $primary-color;
-  padding: 10% 5% 5%;
+#footer {
+  background: $color-1;
+  padding-bottom: 2rem;
 
   @include breakpoint(viewport-7) {
-    padding: 8rem 10% 2rem;
+    padding-bottom: 3%;
   }
 
   @include breakpoint(viewport-7) {
-    padding: 4% 10%;
+    padding-bottom: 2%;
   }
 
   .footer__top {
     border-bottom: 1px solid $mine-shaft-border-bottom;
     padding-bottom: $medium-spacing;
+    width: 100%;
     @include flexbox;
     @include flex-direction(column);
 
     @include breakpoint(viewport-7) {
       @include flex-direction(row);
       @include justify-content(space-between);
-    }
-    @include breakpoint(viewport-12) {
-      max-width: 75%;
     }
   }
 
@@ -33,43 +31,47 @@ footer {
     color: $secondary-color;
     font-size: 2.2rem;
     font-weight: 500;
-    letter-spacing: 1px;
-    margin-bottom: $xs-spacing;
-    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 
-    @include breakpoint(viewport-) {
+    @include breakpoint(viewport-7) {
       font-size: 2.2rem;
       letter-spacing: 0.2rem;
     }
 
     @include breakpoint(viewport-9) {
-      font-size: 2.4rem;
+      font-size: 2.6rem;
+    }
+
+    @include breakpoint(viewport-12) {
+      font-size: 3rem;
     }
   }
 
   .footer-title__subtitle {
     color: $accent-color-2;
     font-family: $secondary-font-family;
+    margin: $xs-spacing 0;
     font-weight: 500;
     font-size: 1.7rem;
-    margin-bottom: 5px;
+
+    @include breakpoint(viewport-9) {
+      font-size: 2rem;
+    }
+
+    @include breakpoint(viewport-12) {
+      font-size: 2.2rem;
+    }
   }
 
   .footer-title__line {
     background: $accent-color-2;
-    height: 3px;
+    height: 0.3rem;
     text-align: left;
-    width: 50px;
+    width: 5rem;
   }
-  .footer__links {
-    text-align: left;
 
-    @include breakpoint(viewport-7) {
-      margin-right: 11.5rem;
-    }
-  }
   .footer__links__link {
-    margin: 0 0 0.8rem;
+    margin-bottom: $small-spacing;
 
     a {
       font-family: $secondary-font-family;
@@ -88,39 +90,33 @@ footer {
   .footer-bottom {
     border-top: 2px solid $mine-shaft-border-top;
     padding-top: 3rem;
+    width: 100%;
     @include flexbox;
     @include flex-direction(column);
 
     @include breakpoint(viewport-7) {
       @include flex-direction(row);
-      @include justify-content(space-around);
+      @include justify-content(space-between);
     }
 
-    @include breakpoint(viewport-12) {
-      max-width: 75%;
-    }
-  }
-
-  .terms-conditions {
-    margin-bottom: 1rem;
-    text-align: left;
-
-    p {
+    .terms-conditions {
+      margin-bottom: 1rem;
+      text-align: left;
       color: $secondary-color;
       font-size: 1.2rem;
       opacity: 0.8;
     }
-  }
 
-  .designed-by {
-    color: $secondary-color;
-    font-family: $secondary-font-family;
-    font-weight: 600;
-    font-size: 1.2rem;
-  }
+    .designed-by {
+      color: $secondary-color;
+      font-family: $secondary-font-family;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
 
-  .my-site {
-    color: $accent-color-2;
-    font-weight: 600;
+    .dev {
+      color: $accent-color-2;
+      font-weight: 600;
+    }
   }
 }

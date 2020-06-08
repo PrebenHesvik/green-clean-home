@@ -8,6 +8,7 @@
   top: 2.5rem;
   right: 2.5rem;
   position: absolute;
+  color: $white;
 
   @include breakpoint(viewport-4) {
     font-size: 1.7rem;
@@ -57,22 +58,25 @@
     font-size: 2rem;
     margin-bottom: 3rem;
     opacity: 0.9;
+    color: $font-color-2;
   }
 
   &__link-tag {
     @include flexbox;
     @include align-items(center);
+    color: $font-color-2;
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: $secondary-font-family;
   }
 
   &__link-icon {
-    margin-right: 1.5rem;
-    border-radius: 50%;
-    border: 2px solid white;
+    margin-right: $base-spacing;
     @include flex-centered;
-    @include size(3.7rem);
 
     i {
-      font-size: 1.5rem;
+      font-size: 2rem;
+      color: $font-color-2;
     }
   }
 }

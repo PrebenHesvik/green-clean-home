@@ -2,52 +2,145 @@
   width: 100%;
   box-shadow: 4px 4px 3px rgba(88, 87, 87, 0.2);
   @include flexbox;
-  @include justify-content(space-between);
-}
-
-.left-side {
-  background: $green-regular;
-  padding: 4rem 3rem;
-  width: 50%;
-  @include flex-centered;
-}
-
-.contact-cards {
-  @include flexbox;
   @include flex-direction(column);
-  @include align-self(flex-start);
-  @include align-items(stretch);
-  width: 100%;
 
-  @include breakpoint(viewport-9) {
-    @include align-self(center);
-  }
-}
-
-.contact-card {
-  padding: 30px 5px;
-  background: #899e8b;
-  @include flexbox;
-  @include justify-content(flex-start);
-
-  &:not(:first-child) {
-    border-top: $green-border-top;
+  @include breakpoint(viewport-7) {
+    @include flex-direction(row);
   }
 
-  &:not(:last-child) {
-    border-bottom: $green-border-bottom;
+  &__info {
+    background: $green-regular;
+    padding: $base-spacing $medium-spacing;
+    @include flex-centered;
+    @include border-top-radius($base-border-radius);
+
+    @include breakpoint(viewport-7) {
+      width: 50%;
+      padding: 0 $medium-spacing;
+      @include border-top-radius(0px);
+      @include border-left-radius($base-border-radius);
+    }
+
+    @include breakpoint(viewport-12) {
+      padding: 0 $large-spacing;
+    }
+
+    @include breakpoint(viewport-14) {
+      padding: 0 $xl-spacing;
+    }
   }
 
-  .contact-card__icon {
-    font-size: 2rem;
-    color: lighten($primary-color, 10%);
-    color: darken($font-color-2, 5%);
-    margin-right: 2rem;
+  &__details {
+    @include flexbox;
+    @include flex-direction(column);
+    width: 100%;
   }
 
-  .contact-card__heading {
-    font-size: 1.5rem;
-    color: lighten($primary-color, 10%);
-    color: darken($font-color-2, 5%);
+  &__detail {
+    padding: $base-spacing $xs-spacing;
+    background: $green-regular;
+    @include flexbox;
+    @include justify-content(flex-start);
+
+    @include breakpoint(viewport-7) {
+      padding: $medium-spacing $xs-spacing;
+    }
+
+    &:not(:first-child) {
+      border-top: $green-border-top;
+    }
+
+    &:not(:last-child) {
+      border-bottom: $green-border-bottom;
+    }
+
+    .icon {
+      font-size: 2rem;
+      color: darken($font-color-2, 5%);
+      margin-right: $base-spacing;
+    }
+
+    .heading {
+      font-size: 1.3rem;
+      color: darken($font-color-2, 5%);
+
+      @include breakpoint(viewport-7) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__form {
+    background: $green-light;
+    width: 100%;
+    padding: $medium-spacing $base-spacing;
+    @include border-bottom-radius($base-border-radius);
+    @include flex-centered;
+    @include flex-direction(column);
+
+    @include breakpoint(viewport-7) {
+      width: 50%;
+      padding: $large-spacing $medium-spacing;
+      @include border-bottom-radius(0px);
+      @include border-right-radius($base-border-radius);
+    }
+
+    @include breakpoint(viewport-12) {
+      padding: $large-spacing;
+    }
+
+    @include breakpoint(viewport-14) {
+      padding: $large-spacing $xl-spacing;
+    }
+
+    .form__heading {
+      color: $font-color-3;
+      margin-bottom: $base-spacing;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+
+      @include breakpoint(viewport-12) {
+        margin-bottom: $base-spacing;
+      }
+    }
+  }
+
+  #contact-form {
+    width: 100%;
+
+    @include breakpoint(viewport-7) {
+      //width: 90%;
+    }
+
+    .flex-form-group {
+      @include flexbox;
+      @include flex-direction(column);
+      margin-bottom: $small-spacing;
+      position: relative;
+
+      @include breakpoint(viewport-12) {
+        margin-bottom: $base-spacing;
+      }
+    }
+
+    .help-inline {
+      position: absolute;
+      font-size: 1rem;
+    }
+
+    input,
+    textarea {
+      display: block;
+      font-family: $primary-font-family;
+      font-size: 1.6rem;
+      padding: 1.2rem;
+      border-radius: 2%;
+      background: $green-medium;
+      border: 1px solid $green-border-md;
+    }
+
+    textarea {
+      overflow: auto;
+    }
   }
 }

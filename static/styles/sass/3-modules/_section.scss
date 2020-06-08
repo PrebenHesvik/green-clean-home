@@ -5,10 +5,15 @@
   @include align-items(center);
 
   @include breakpoint(viewport-9) {
-    padding: 7% 10%;
+    padding: 7% 7%;
   }
+
+  @include breakpoint(viewport-12) {
+    padding: 5% 7%;
+  }
+
   @include breakpoint(viewport-14) {
-    padding: 4% 10%;
+    padding: 5% 7%;
   }
 
   &__title {
@@ -32,15 +37,21 @@
     width: 50px;
     background: $accent-color-2;
   }
+}
 
-  .content {
-    @include flexbox;
-    @include flex-direction(column);
-    @include align-items(center);
-    width: 100%;
+.content {
+  @include flexbox;
+  @include flex-direction(column);
+  @include align-items(center);
+  width: 100%;
 
-    @include breakpoint(viewport-12) {
-      max-width: 75%;
-    }
+  @include breakpoint(viewport-9) {
+    max-width: 95rem;
+  }
+  @include breakpoint(viewport-12) {
+    max-width: 100rem;
+  }
+  @include breakpoint(viewport-14) {
+    max-width: 120rem;
   }
 }

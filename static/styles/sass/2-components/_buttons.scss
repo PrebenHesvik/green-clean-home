@@ -3,19 +3,18 @@
   background: $accent-color-2;
   color: $secondary-color;
 }
-.btn-transparent {
-  background: transparent;
-}
+
 .btn-block {
   width: 100%;
 }
 
 .button-send {
   background: darken($font-color-2, 5%);
-  border-radius: 3px;
+  border: 1px solid darken($font-color-2, 15%);
   color: $font-color-3;
-  padding: 10px 20px;
-  border: none;
-  font-size: modular-scale(1);
   font-weight: 500;
+
+  &:hover {
+    background-color: $font-color-2;
+  }
 }

@@ -1,0 +1,79 @@
+.price-calc {
+  @include flexbox;
+  @include flex-direction(column);
+  width: 100%;
+  box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
+
+  @include breakpoint(viewport-7) {
+    @include flex-direction(row);
+  }
+
+  .select-wrapper {
+    position: relative;
+    background-color: $green-medium;
+    overflow: hidden;
+    width: 100%;
+    height: 6.5rem;
+    border-bottom: 1px solid lighten($black, 55%);
+    padding-left: 1.5rem;
+
+    @include breakpoint(viewport-7) {
+      border-right: 1px solid lighten($black, 55%);
+      border-bottom: none;
+      width: 25%;
+    }
+
+    @include breakpoint(viewport-9) {
+      padding-left: 2rem;
+    }
+
+    .absolute {
+      position: absolute;
+      color: $white;
+      @include absolute(top 1.8rem right 1.5rem);
+
+      i {
+        color: lighten($font-color-3, 10%);
+        font-size: 3rem;
+        -webkit-text-stroke: 2px $green-medium;
+      }
+    }
+
+    select {
+      font-family: $primary-font-family;
+      font-weight: 500;
+      font-size: 1.7rem;
+      color: $font-color-3;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      cursor: pointer;
+      height: 100%;
+      width: 100%;
+      background: transparent;
+      border: none;
+    }
+
+    option {
+      color: $font-color-3;
+    }
+  }
+  .price-box {
+    background-color: darken($white, 2%);
+    width: 100%;
+    height: 6.5rem;
+    @include flex-centered;
+
+    @include breakpoint(viewport-7) {
+      width: 25%;
+    }
+
+    p {
+      color: $font-color-3;
+      font-family: $primary-font-family;
+      font-size: 2rem;
+      font-weight: 500;
+      text-align: center;
+    }
+  }
+}

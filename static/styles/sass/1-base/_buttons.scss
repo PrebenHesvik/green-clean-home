@@ -24,33 +24,4 @@ $_button-background-color-hover: shade($accent-color-1, 20%);
   vertical-align: middle;
   -webkit-appearance: button;
   white-space: nowrap;
-
-  &:hover {
-    @include transform(scale(1.03));
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.18);
-  }
-
-  &:focus {
-    @include transform(scale(1));
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.05);
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-
-    &:hover {
-      background-color: $_button-background-color;
-    }
-  }
-  // @include mq(mobile-3) {
-  //     padding: 0.6rem 1.3rem;
-  //     font-size: modular-scale(0);
-  // }
 }
-
-// button::-moz-focus-inner,
-// input::-moz-focus-inner {
-//     border: 0;
-//     padding: 0;
-// }

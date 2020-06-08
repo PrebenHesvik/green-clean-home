@@ -23,7 +23,7 @@ $font-color-2: $white;
 $font-color-3: lighten($mine-shaft, 10%);
 
 // Background colors
-$bg-color-1: $white;
+$bg-color-1: lighten(#899e8b, 45%);
 $bg-color-2: lighten(#899e8b, 30%);
 
 //accent-colors
@@ -33,7 +33,7 @@ $accent-color-2: $brown-sugar;
 //Green palette
 $green-light: lighten(#899e8b, 20%);
 $green-medium: lighten(#899e8b, 10%);
-$green-regular: $mute-green;
+$green-regular: lighten(#899e8b, 0%);
 $green-border-light: lighten(#899e8b, 17%);
 $green-border-md: lighten(#899e8b, 5%);
 $green-border-top: 2px solid lighten(#899e8b, 5%);
