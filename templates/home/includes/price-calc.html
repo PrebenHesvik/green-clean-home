@@ -1,0 +1,44 @@
+<div class="section__title">
+  <h2 class="section__title-text">Pricing</h2>
+  <p class="section__title-line"></p>
+</div>
+<div class="content">
+  <div class="price-calc">
+    <!-- House type -->
+    <div class="select-wrapper">
+      <span class="absolute"><i class="fas fa-angle-down"></i></span>
+      <select name="" id="house-type" class="get-quote">
+        <option value="Studio" selected>Studio</option>
+        <option value="1 bedroom">1 bedroom</option>
+        <option value="2 bedrooms">2 bedrooms</option>
+        <option value="3 bedrooms">3 bedrooms</option>
+        <option value="4 bedrooms">4 bedrooms</option>
+        <option value="5 bedrooms">5 bedrooms</option>
+      </select>
+    </div>
+    <!-- Number of bathrooms -->
+    <div class="select-wrapper">
+      <span class="absolute"><i class="fas fa-angle-down"></i></span>
+      <select name="" id="bathroom" class="get-quote">
+        <option value="1 bathroom" selected>1 bathroom</option>
+        <option value="2 bathrooms">2 bathrooms</option>
+        <option value="3 bathrooms">3 bathrooms</option>
+        <option value="4 bathrooms">4 bathrooms</option>
+        <option value="5 bathrooms">5 bathrooms</option>
+      </select>
+    </div>
+    <!-- Cleaning type -->
+    <div class="select-wrapper">
+      <span class="absolute"><i class="fas fa-angle-down"></i></span>
+      <select name="" id="cleaning-type" class="get-quote">
+        <option value="Standard" selected>Standard</option>
+        <option value="Standard Plus">Standard Plus</option>
+        <option value="Deep Clean">Deep Clean</option>
+        <option value="Moving in/out">Moving in/out</option>
+      </select>
+    </div>
+    <div class="price-box">
+      {% include 'home/includes/price.html' %}
+    </div>
+  </div>
+</div>

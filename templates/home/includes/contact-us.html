@@ -1,0 +1,72 @@
+<div class="section__title">
+  <h2 class="section__title-text">Contact Us</h2>
+  <p class="section__title-line"></p>
+</div>
+<div class="content">
+  <div class="contact-us">
+    <div class="contact-us__info">
+      <ul class="contact-us__details">
+        <li class="contact-us__detail">
+          <span class="icon">
+            <i class="fas fa-phone"></i>
+          </span>
+          <div class="contact-card__text">
+            <h3 class="heading">{{ phone}}</h3>
+          </div>
+        </li>
+        <li class="contact-us__detail">
+          <span class="icon">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <div class="contact-card__text">
+            <h3 class="heading">{{ email}}</h3>
+          </div>
+        </li>
+        <li class="contact-us__detail">
+          <span class="icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </span>
+          <div class="contact-card__text">
+            <h3 class="heading">5100 USAA Blvd</h3>
+            <h3 class="heading">San Antonio, TX 78240</h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Contact form -->
+    <div class="contact-us__form">
+      <h3 class="form__heading">Leave us a message</h3>
+      <form
+        id="contact-form"
+        action="/submit_form/"
+        class=""
+        method="POST"
+        enctype="multipart/form-data"
+        data-url=""
+      >
+        {% csrf_token %} {% for field in form %} {% if field.errors %}
+        <div class="flex-form-group">
+          {{ field }}
+          <span class="focus-border">
+            <i></i>
+          </span>
+          <p class="help-inline">
+            {% for error in field.errors %} {{ error }} {% endfor %}
+          </p>
+        </div>
+        {% else %}
+        <div class="flex-form-group">
+          {{ field }}
+          <span class="focus-border">
+            <i></i>
+          </span>
+        </div>
+        {% endif %} {% endfor %}
+        <button id="" type="submit" value="submit" class="btn-block button-send">
+          <span class="button-text">Send</span>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

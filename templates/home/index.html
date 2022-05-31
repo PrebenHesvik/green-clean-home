@@ -1,229 +1,27 @@
 {% extends "base.html" %} {% block body %}
 <!-- Showcase start -->
 <div id="showcase">
-  <div class="showcase__bg-image | bg-image">
-    <div class="showcase__frame">
-      <div class="showcase__title">
-        <h5 class="showcase__pre-title-text">Welcome to</h5>
-        <h1 class="showcase__title-text">Green Clean Home</h1>
-        <p class="showcase__text-separator"></p>
-        <p class="showcase__post-title-text">Eco-Friendly Cleaning</p>
-      </div>
-    </div>
-  </div>
+  {% include "home/includes/showcase.html" %}
 </div>
-<!-- Showcase end -->
 
 <!-- Section - Our Mission  -->
 <div id="section-a" class="section">
-  <div class="section__title">
-    <h2 class="section__title-text">Our mission</h2>
-    <p class="section__title-line"></p>
-  </div>
-  <div class="content">
-    <div class="text-box">
-      <p class="text-box__text">
-        At Green Home and Office, eco-friendly practices aren't just a fad, they are how we've done
-        business from the start. We operate in an environmentally responsible way and use cleaning
-        methods that are safe for our clients, safe for their families and safe for pets and the
-        planet.
-      </p>
-      <p class="text-box__text">
-        We help you take the pressure off and leave you to do more of the things you love. We'd be
-        honored to have your business and do our parts together.
-      </p>
-    </div>
-  </div>
+  {% include "home/includes/our-mission.html" %}
 </div>
 
 <!-- About Us section -->
 <div id="section-b" class="section">
-  <div class="section__title">
-    <h2 class="section__title-text">About Us</h2>
-    <p class="section__title-line"></p>
-  </div>
-  <div class="content">
-    <ul class="cards">
-      <li class="card">
-        <div class="card__icon-group">
-          <span class="card__icon">
-            <i class="fas fa-users"></i>
-          </span>
-        </div>
-        <div class="card__text">
-          <h3 class="card__heading">Three and four person teams</h3>
-          <p class="card__paragraph">Licensed, insured and bonded for ease of mind.</p>
-        </div>
-      </li>
-      <li class="card">
-        <div class="card__icon-group">
-          <span class="card__icon">
-            <i class="fas fa-map-marker"></i>
-          </span>
-        </div>
-        <div class="card__text">
-          <h3 class="card__heading">We serve greater San Antonio area</h3>
-          <p class="card__paragraph"><a href="" class="accent-2">list</a> of cities we serve.</p>
-        </div>
-      </li>
-      <li class="card">
-        <div class="card__icon-group">
-          <span class="card__icon">
-            <i class="fas fa-brush"></i>
-          </span>
-        </div>
-        <div class="card__text">
-          <h3 class="card__heading">Home and office cleaning services</h3>
-          <p class="card__paragraph">
-            Standard or customized options to choose from.
-          </p>
-        </div>
-      </li>
-
-      <li class="card">
-        <div class="card__icon-group">
-          <span class="card__icon">
-            <i class="fas fa-credit-card"></i>
-          </span>
-        </div>
-        <div class="card__text">
-          <h3 class="card__heading">Ease of payment</h3>
-          <p class="card__paragraph">
-            Major credit cards, cash and bitcoin accepted.
-          </p>
-        </div>
-      </li>
-    </ul>
-    <!-- Button -->
-    <a href="">
-      <button id="btn-about-us" type="button" class="btn">
-        Read More
-      </button>
-    </a>
-  </div>
+  {% include "home/includes/about-us.html" %}
 </div>
-<div id="section-d" class="section">
-  <div class="section__title">
-    <h2 class="section__title-text">Contact Us</h2>
-    <p class="section__title-line"></p>
-  </div>
-  <div class="content">
-    <div class="contact-us">
-      <div class="contact-us__info">
-        <ul class="contact-us__details">
-          <li class="contact-us__detail">
-            <span class="icon">
-              <i class="fas fa-phone"></i>
-            </span>
-            <div class="contact-card__text">
-              <h3 class="heading">{{ phone}}</h3>
-            </div>
-          </li>
-          <li class="contact-us__detail">
-            <span class="icon">
-              <i class="fas fa-envelope"></i>
-            </span>
-            <div class="contact-card__text">
-              <h3 class="heading">{{ email}}</h3>
-            </div>
-          </li>
-          <li class="contact-us__detail">
-            <span class="icon">
-              <i class="fas fa-map-marker-alt"></i>
-            </span>
-            <div class="contact-card__text">
-              <h3 class="heading">5100 USAA Blvd</h3>
-              <h3 class="heading">San Antonio, TX 78240</h3>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Contact form -->
-      <div class="contact-us__form">
-        <h3 class="form__heading">Leave us a message</h3>
-        <form
-          id="contact-form"
-          action="/submit_form/"
-          class=""
-          method="POST"
-          enctype="multipart/form-data"
-          data-url=""
-        >
-          {% csrf_token %} {% for field in form %} {% if field.errors %}
-          <div class="flex-form-group">
-            {{ field }}
-            <span class="focus-border">
-              <i></i>
-            </span>
-            <p class="help-inline">
-              {% for error in field.errors %} {{ error }} {% endfor %}
-            </p>
-          </div>
-          {% else %}
-          <div class="flex-form-group">
-            {{ field }}
-            <span class="focus-border">
-              <i></i>
-            </span>
-          </div>
-          {% endif %} {% endfor %}
-          <button id="" type="submit" value="submit" class="btn-block button-send">
-            <span class="button-text">Send</span>
-          </button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End of section-d -->
 
 <!-- Start of section-e -->
+<div id="section-d" class="section">
+  {% include "home/includes/price-calc.html" %}
+</div>
+
+<!-- Section e -->
 <div id="section-e" class="section">
-  <div class="section__title">
-    <h2 class="section__title-text">Pricing</h2>
-    <p class="section__title-line"></p>
-  </div>
-  <div class="content">
-    <div class="price-calc">
-      <!-- House type -->
-      <div class="select-wrapper">
-        <span class="absolute"><i class="fas fa-angle-down"></i></span>
-        <select name="" id="house-type" class="get-quote">
-          <option value="Studio" selected>Studio</option>
-          <option value="1 bedroom">1 bedroom</option>
-          <option value="2 bedrooms">2 bedrooms</option>
-          <option value="3 bedrooms">3 bedrooms</option>
-          <option value="4 bedrooms">4 bedrooms</option>
-          <option value="5 bedrooms">5 bedrooms</option>
-        </select>
-      </div>
-      <!-- Number of bathrooms -->
-      <div class="select-wrapper">
-        <span class="absolute"><i class="fas fa-angle-down"></i></span>
-        <select name="" id="bathroom" class="get-quote">
-          <option value="1 bathroom" selected>1 bathroom</option>
-          <option value="2 bathrooms">2 bathrooms</option>
-          <option value="3 bathrooms">3 bathrooms</option>
-          <option value="4 bathrooms">4 bathrooms</option>
-          <option value="5 bathrooms">5 bathrooms</option>
-        </select>
-      </div>
-      <!-- Cleaning type -->
-      <div class="select-wrapper">
-        <span class="absolute"><i class="fas fa-angle-down"></i></span>
-        <select name="" id="cleaning-type" class="get-quote">
-          <option value="Standard" selected>Standard</option>
-          <option value="Standard Plus">Standard Plus</option>
-          <option value="Deep Clean">Deep Clean</option>
-          <option value="Moving in/out">Moving in/out</option>
-        </select>
-      </div>
-      <div class="price-box">
-        {% include 'home/includes/price.html' %}
-      </div>
-    </div>
-  </div>
+  {% include "home/includes/contact-us.html" %}
 </div>
 
 {% endblock %}
