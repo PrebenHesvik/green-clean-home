@@ -49,7 +49,9 @@ $secondary-line-height: 1.2;
 
 // Other Sizes
 $base-border-radius: 2px;
+$medium-border-radius: 4px;
 
+$xxl-spacing: 8.6rem;
 $xl-spacing: 7.2rem;
 $large-spacing: 6.4rem;
 $medium-spacing: 3.2rem;
@@ -65,7 +67,8 @@ $text-opacity: 0.9;
 $primary-border-color: darken($secondary-color, 20%);
 
 // Box shadow
-$base-box-shadow: 2px 2px 3px rgba(225, 225, 225, 0.1);
+$base-box-shadow: 2px 2px 3px 3px rgba(225, 225, 225, 0.1);
+$secondary-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.15);
 
 // Focus
 $focus-outline-color: transparentize($accent-color-1, 0.4);

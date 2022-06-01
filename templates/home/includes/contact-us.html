@@ -39,7 +39,7 @@
       <h3 class="form__heading">Leave us a message</h3>
       <form
         id="contact-form"
-        action="/submit_form/"
+        action="/submit-form/"
         class=""
         method="POST"
         enctype="multipart/form-data"
@@ -62,8 +62,15 @@
             <i></i>
           </span>
         </div>
-        {% endif %} {% endfor %}
-        <button id="" type="submit" value="submit" class="btn-block button-send">
+        {% endif %} {% endfor %} {% comment %}
+        <div class="g-recaptcha" data-sitekey="{{google_data_site_key}}"></div>
+        {% endcomment %}
+        <button
+          id=""
+          type="submit"
+          value="submit"
+          class="btn-block button-send"
+        >
           <span class="button-text">Send</span>
         </button>
       </form>

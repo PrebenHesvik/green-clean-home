@@ -1,7 +1,7 @@
 import requests
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.template.loader import render_to_string
 from django.core.mail import send_mail
 from django.conf import settings
@@ -45,6 +45,7 @@ def home(request):
     context = {
         "form": ContactForm(),
         "price": price,
+        "google_data_site_key": settings.GOOGLE_DATA_SITE_KEY,
     }
 
     return render(request, template, context)

@@ -28,6 +28,7 @@ a {
   background-color: transparent;
   text-decoration: none;
   transition: color $base-duration $base-timing;
+  color: inherit;
 
   &:hover {
     outline: 0;

@@ -1,0 +1,561 @@
+{% extends "base.html" %}
+{% block title %}FAQ{% endblock %}
+{% block body %}
+<div class="section-width container container-faq" >
+    <div class="page-header">
+        <h2 class="title">Frequently Asked Questions</h2>
+        <p class="faq-header-text paragraph-text">Here are some common questions we receive from our customers.</p>
+        <p class="faq-header-text paragraph-text">If you don't find the answer to your question please don't hesitate to call us at <span class="accent-2">{{ phone}}</span > or email <span class="accent-2">{{email}}</span>.</p>
+    </div>
+
+    <div class="faq-content">
+        <div class="table-contents">
+            <nav id="regular-faq-nav navigation" class="regular-faq-nav">
+                <p>Table of contents</p>
+                <ul class="menu">
+                    <li class="faq-category"><a href="#section_1">General</a></li>
+                    <li class="faq-category"><a href="#section_2">Cleaning Details</a></li>
+                    <li class="faq-category"><a href="#section_3">Billing</a></li>
+                    <li class="faq-category"><a href="#section_4">200% Satisfaction Guarantee</a></li>
+                    <li class="faq-category"><a href="#section_5">Scheduling</a></li>
+                    <li class="faq-category"><a href="#section_6">Cleaning Tips</a></li>
+                </ul>
+            </nav>
+            <nav class="mobile-faq-nav">
+                <div class="drop-down-menu">
+                        <a href="" class="toggle-me">Table of contents
+                                <span><i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+                                </span>
+                        </a>
+                        <div class="drop-down-items">
+                            <ul>
+                                <li class="drop-down-item"><a href="#section_1">General</a></li>
+                                <li class="drop-down-item"><a href="#section_2">Cleaning Details</a></li>
+                                <li class="drop-down-item"><a href="#section_3">Billing</a></li>
+                                <li class="drop-down-item"><a href="#section_4">200% Satisfaction Guarantee</a></li>
+                                <li class="drop-down-item"><a href="#section_5">Scheduling</a></li>
+                                <li class="drop-down-item"><a href="#section_6">Cleaning Tips</a></li>
+                            </ul>
+                        </div>
+                </div>
+            </nav>
+        </div>
+        <div class="questions" >
+            <ul >
+                <li id="section_1" class="question-category-list">
+                    <p class="question-category">General</p>
+                    <ul>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">I've never had maid service before. How does it work?</p>
+                            </div>
+                            <div class="answer">
+                                    <p class="answer-text" >To begin, you can complete our <span class="accent-2">Schedule a cleaning form</span> online or give us a call at
+                                        <span class="accent-2">{{ phone}}</span>. We’ll collect some information about your cleaning needs and the size of your home, 
+                                        then provide you with a cost estimate. 
+                                        If you approve the estimate, you can book an appointment using the same online form or by scheduling a time with us over the phone.
+                                    <p class="answer-text">On the day of your appointment, within a 4 to 5 hour window of the scheduled time, a team of 3 to 4 Green Home and Office professionals
+                                        will arrive at your home. Depending on your preference and schedule, you can either be at home to let our team in or you can provide us 
+                                        with keys in advance.</p>
+                                    <p class="answer-text">Our cleaning professionals bring their own supplies and equipment and will follow any special instructions provided at the time of booking. 
+                                        We encourage clients to tidy up prior to our visit, as this can sometimes reduce the total cost.
+                                    <p class="answer-text">Once your cleaning has been completed, we will process your payment. If you prepaid for your cleaning online, we will simply provide you with
+                                        a receipt. If you did not prepay, we will accept your payment at this time. Green Home and Office charges by the hour, so your rate will be based
+                                        on the amount of time we spent cleaning your home. Later, a member of our staff will contact you to ensure that you are completely satisfied 
+                                        with our work. You can also use our <a>Customer Feedback form</a> to let us know what you think about our services. We welcome your feedback!</p>
+                            </div>
+                            
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">Are you licensed, bonded and insured?</p>
+                            </div>
+                            <div class="answer">
+                            <p class="answer-text">Yes, we are fully licensed, bonded, and insured in Washington, DC, Virginia, and Maryland.</p>       
+                            </div>
+                            
+                            </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">Should I do anything to prepare for my cleaning appointment?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">To prepare for a Green Home and Office visit, homeowners can do the following:</p>
+                                <ul class="faq-sub-list">
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>If you have any special instructions for our team, please notify us ahead of time using the Special Instructions form or give us a call at <span class="accent-2">{{phone}}</span> . 
+                                                You can also contact us with questions at any time.</p>
+                                    </li>
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>By picking up and tidying your home before your appointment, you’ll be freeing up our team to focus on cleaning, rather than straightening up. Since our services are billed hourly, you’ll be saving money.</p>
+                                    </li>
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>Place fresh linens on the beds if you would like us to strip the sheets and remake the beds.</p>
+                                    </li>
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>Check your home for items in need of repair such as toilet paper holders, drawer or appliance handles, glass shelves, and so on.</p>
+                                    </li>
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>If you have hardwood floors, place felt padding on the feet of furniture to prevent scratching when the furniture is moved for cleaning.</p>
+                                    </li>
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>Check that picture frames, mirrors, and art pieces have been hung securely with sturdy hooks. Place bumper guards on the back of wall hangings to prevent wall dings or scratches.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">Do I need to be home when you arrive? What about a key?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">You don’t need to be home while we clean. For convenience, most clients provide us with a key. You can visit our office to drop off a key or send it by mail. (We recommend using a padded envelope as a safeguard.) We take the security of client keys very seriously.</p>
+                                <p class="answer-text">Clients who use a security alarm typically assign us a unique security code. For apartment and condominium complexes, we usually register at the front desk and sign out a key.</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">Do I need to provide any cleaning products or equipment?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">We provide all of the equipment and supplies. Because we practice green cleaning, we select our cleaning products carefully to ensure that they are environmentally friendly, non-toxic, non-allergenic, and non-abrasive. We do not use waxes, polishes, ammonia, bleach, scented or alcohol-based products. However, we will be happy to use any products that you supply. If you have special instructions, please notify our office at <span class="accent-2">{{ phone}}</span>.</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">What should I do with my pet while you are cleaning?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">You don’t need to do anything. Our cleaning teams work safely around house pets and all of our cleaning products are safe and non-toxic. However, if you would like to give us special instructions regarding your pet, please give us a call at <span class="accent-2">{{ phone}}</span> .</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">What time will your cleaning team arrive?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">Our cleaning teams works from 7:00 a.m. to 3:00 p.m. While we cannot tell you the exact time of arrival, we can give you a timeframe, generally a 3 to 4 hour window. First house between 7:00-7:30AM.</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text"> What if something breaks while your team is cleaning?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">We treat your home with as much care and consideration as our own. If an item in your home is broken or damaged, our cleaning team will leave you a note and our office manager will promptly contact you to discuss the incident. We cover the cost of replacement or repair and carry insurance for valuable items.</p>
+                                <p class="answer-text">Please let us know about any items or collections that possess significant sentimental or monetary value and we will avoid cleaning them. In such cases, we prefer to leave your precious objects undisturbed, rather than risking a mishap.</p>
+                                <p class="answer-text">In addition to valuable items, we avoid cleaning inside curio cabinets or around sensitive items such as plasma TVs, computers, other electronic devices, and associated wires and plugs.</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text"> Do team members speak English?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">Green Home and Office believes in equitable treatment of all employees and applicants. We have a diverse, multicultural staff. We also value good communication between our customers and team members. If you have any notes or special requests, please contact us at <span class="accent-2">{{ phone}}</span>. We will add this information to the work orders for the team.</p>
+                                <p class="answer-text">All of our teams are in contact with the office via cell phone throughout the work day. Let us know about any concerns you may have and we will contact the team immediately, even while they are working in your home.</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text"> Should I tip the cleaning team?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">Our team members do not expect tips. However, they are permitted to accept them, should you choose to leave a tip as recognition for exceptional work.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li id="section_2" class="question-category-list">
+                    <p id="cleaning-details" class="question-category">Cleaning details</p>
+                    <ul>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text"> How many people will be cleaning my home and business?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">Our teams are made up of 3 to 4 cleaning professionals, one of whom is a team leader. The team leader provides guidance, assists with the cleaning, and performs an inspection at the end of the visit.</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">Will the same team clean for me every time?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">If you schedule weekly or bi-weekly cleaning service, the same 3 or 4 person team will clean for you.</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">Can I request team members to remove their shoes when they clean?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">For safety reasons, team members are required to wear shoes at all times when cleaning.</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">Do you wash laundry or dishes?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">We do not provide laundry or dishwashing service at this time.</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">Do you steam clean carpets?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">We are not currently staffed for carpet cleaning. However, we are happy to offer these recommendations:</p>
+                                <ul class="faq-sub-list">
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>FGlobal Service (703.309.6229)</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">Do you wash windows?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">We do not wash windows at this time.</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">Do you use HEPA filters on your vacuum cleaners?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">Yes, our vacuum cleaners do contain HEPA filters.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li id="section_3" class="question-category-list">
+                    <p class="question-category">Billing</p>
+                    <ul>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">How do I pay for service?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">If you are a first time customer, payment is rendered at time of service  For all customers, we accept cash, personal checks, Visa, 
+                                    MasterCard, and American Express. It is our policy to keep a credit card on file to guarantee your cleaning appointment. To set-up automatic 
+                                    credit card billing for easy payment of future cleaning services, click here to download the <span class="accent-2">Credit Card Enrollment Form</span> .</p>
+                                <p class="answer-text">For clients who wish to set-up recurring payment using their bank’s auto-pay service, please be sure to schedule checks to arrive at Green Home and Office before 
+                                    or on the day of your cleaning service.</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">How do you determine your rates?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">The cost to clean your home is based on the amount of time we spend cleaning.</p>
+                                <p class="faq-sub-heading">Recurring Cleaning services:</p>
+                                <ul class="faq-sub-list">
+                                    <li class="faq-sub-list-item">The rate for recurring cleaning service is $37per hour, per team member. A cleaning team is comprised of 3 to 4 members.</li>
+                                    <li class="faq-sub-list-item">The minimum rate to send a team to your home for recurring service is $111.00.</li>
+                                </ul>
+                                <p class="faq-sub-heading">All Other Services (Initial Cleaning, One-Time, Move In & Move Out, Construction Clean-Up):</p>
+                                <ul class="faq-sub-list">
+
+                                    <li class="faq-sub-list-item">The rate for all other services is $37.00 per hour, per team member. A cleaning team is comprised of 3 to 4 members.</li>
+                                    <li class="faq-sub-list-item">The minimum rate to send a team to your home is $222.00. ($166.00 for homes under 700 square feet.)</li>
+                                </ul>
+
+
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li id="section_4" class="question-category-list">
+                    <p class="question-category">200% Satisfaction guarantee</p>
+                    <ul>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text"> What if I’m not satisfied with a cleaning?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">At Green Home and Office, we have a 200% satisfaction guarantee. If at any time you are not satisfied with your service, please contact us immediately. We will schedule a re-cleaning appointment on the next business day at no cost to you. After the re-cleaning, if you still have concerns, we will meet with you again to discuss. At this time, if we are unable to resolve the issue, the cost of your cleaning will be credited back to you.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li id="section_5" class="question-category-list">
+                    <p class="question-category">Scheduling</p>
+                    <ul>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">What if I need to reschedule or cancel an appointment?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">You may cancel or reschedule your appointment. However, because we have reserved time in our busy schedule to accommodate your cleaning, we require a 24 hour notice to cancel your appointment without penalty. Cancellations made with less than 24 hours of notice will incur a $123.00 fee.</p>
+                                <p class="answer-text">Please note: To avoid a late cancellation fee, Monday clients must cancel by 3:00 p.m. on the preceding Thursday.</p>
+                            </div>
+                        </li>
+                        <li class="question-answer">
+                            <div class="question">
+                                <div class="question-icon">
+                                    <p class="plus-horizontal-line"></p>
+                                    <p class="plus-vertical-line"></p>
+                                </div>
+                                <p class="question-text">What if my routine cleaning falls on a holiday?</p>
+                            </div>
+                            <div class="answer">
+                                <p class="answer-text">Green Home and Office observes the following holidays:</p>
+                                <ul class="faq-sub-list">
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>New Year’s Day</p>
+                                    </li>
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>Memorial Day</p>
+                                    </li>
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>Independence Day</p>
+                                    </li>
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>Labor Day</p>
+                                    </li>
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>Thanksgiving Day</p>
+                                    </li>
+                                    <li class="faq-sub-list-item-bullet">
+                                        <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                        <p>Christmas Day</p>
+                                    </li>
+                                </ul>
+                                <p class="answer-text">If a routine cleaning falls on one of the holidays above, we will contact you in advance to reschedule. For all other holidays not listed, Green Home and Office will be open and our cleaning teams will be hard at work.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                
+                <li id="section_6" class="question-category-list">
+                        <p class="question-category">Cleaning Tips</p>
+                        <ul>
+                            <li class="question-answer">
+                                <div class="question">
+                                    <div class="question-icon">
+                                        <p class="plus-horizontal-line"></p>
+                                        <p class="plus-vertical-line"></p>
+                                    </div>
+                                    <p class="question-text">How can I keep my house looking clean between service appointments?</p>
+                                </div>
+                                <div class="answer">
+                                    <ul class="faq-sub-list">
+                                        <li class="faq-sub-list-item-bullet">
+                                            <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                            <p>Place a mat in front of entrance doors.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-bullet">
+                                            <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                            <p>Use a basket for mail, newspapers, and car keys to reduce clutter.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-bullet">
+                                            <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                            <p>Once a day, instruct members of your household to round up and put away their personal belongings.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-bullet">
+                                            <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                            <p>Dust from top to bottom. Also, dust before vacuuming or mopping.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-bullet">
+                                            <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                            <p>hen sweeping, lightly dampen a broom or dust mop with a non-toxic cleaner (safe for floors) for easy removal of dust and dirt.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-bullet">
+                                            <span><i class="fa fa-caret-right" aria-hidden="true"></i></span>
+                                            <p>Vacuum regularly.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="question-answer">
+                                <div class="question">
+                                    <div class="question-icon">
+                                        <p class="plus-horizontal-line"></p>
+                                        <p class="plus-vertical-line"></p>
+                                    </div>
+                                    <p class="question-text">Do you have tips for cleaning delicate surfaces?</p>
+                                </div>
+                                <div class="answer">
+                                    <ul>
+                                        <li class="faq-sub-list-item-plain">
+                                                <p class="faq-sub-list-item-plain-heading" >Glass</p>
+                                                <p>To clean, rub with lemon juice, dry with paper towels, and polish with newspaper. Use toothpaste to remove small scratches from glass.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-plain">
+                                            <p class="faq-sub-list-item-plain-heading">Marble</p>
+                                            <p>To remove stains, sprinkle salt onto a freshly cut lemon. Rub gently over stain. Wash off with soap and water.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-plain">
+                                            <p class="faq-sub-list-item-plain-heading">Wood Furniture</p>
+                                            <p>To clean wood carvings, dip an old toothbrush into furniture polish and brush lightly. To remove polish build-up, mix 1 cup of water and 1 cup of vinegar. Dip a soft cloth in the mixture. Wring out the cloth, then wipe furniture. Dry immediately with a soft, dry cloth.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-plain">
+                                            <p class="faq-sub-list-item-plain-heading">Wallpaper</p>
+                                            <p>To dust, tie a soft dust cloth over a broom and dust from top to bottom. Use an art-gum eraser to remove pencil marks and other non-greasy spots from non-washable wallpaper. To remove greasy spots, crayon marks, fingerprints, and food stains, apply Fuller’s Earth Clay (available at pharmacies). Let dry and brush off. Repeat until spot is removed.</p>
+                                        </li>    
+                                        <li class="faq-sub-list-item-plain">
+                                            <p class="faq-sub-list-item-plain-heading">Wicker</p>
+                                            <p>To remove dust, vacuum using the dust brush attachment. To clean, wash with a solution of 2 tablespoons ammonia per gallon of water. Rinse well. Let air dry.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-plain">
+                                            <p class="faq-sub-list-item-plain-heading">Mini-blinds</p>
+                                            <p>To clean, fill a bucket with warm, soapy water. Put an old sock over each hand like a pair of mittens. Dip one hand into the soapy water. Squeeze your hand to remove excess water, then use the wet sock to clean each blind as your dry hand keeps the blind still. Use the dry sock to dry the clean blind. Repeat.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="question-answer last">
+                                <div class="question">
+                                    <div class="question-icon">
+                                        <p class="plus-horizontal-line"></p>
+                                        <p class="plus-vertical-line"></p>
+                                    </div>
+                                    <p class="question-text">Do you have tips for removing tough stains?</p>
+                                </div>
+                                <div class="answer">
+                                    <p class="answer-text">Use the tips below to tackle tough stains. Be careful with delicate fabrics and surfaces. Try a small test area before continuing on the rest of the material.</p>
+                                    <ul>
+                                        <li class="faq-sub-list-item-plain">
+                                                <p class="faq-sub-list-item-plain-heading" >Blood stains</p>
+                                                <p> For fresh stains, rinse with cold water, never hot. Apply a paste of water and cornstarch. Allow to dry, then brush off. Cover fresh or dried stains with meat tenderizer and add cool water. Wait 30 minutes, then sponge off with cool water.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-plain">
+                                            <p class="faq-sub-list-item-plain-heading">Pen Ink</p>
+                                            <p>Use inexpensive hairspray. (Higher priced brands won’t work.) Spray the stain lightly and gently blot. Rinse fabric when ink has lifted.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-plain">
+                                            <p class="faq-sub-list-item-plain-heading">Removing crayon marks from painted walls</p>
+                                            <p>Scrub with toothpaste or an ammonia-soaked cloth. Rinse and dry.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-plain">
+                                            <p class="faq-sub-list-item-plain-heading">Heel marks</p>
+                                            <p>Use a pencil eraser.</p>
+                                        </li>    
+                                        <li class="faq-sub-list-item-plain">
+                                            <p class="faq-sub-list-item-plain-heading">Candle wax</p>
+                                            <p>To remove from carpets and upholstery, place a paper bag over the dried wax and run a hot iron across it. For dried wax on wood floors, soften wax with a hair dryer, then remove with paper towels. Wash the area with a solution of vinegar and water.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-plain">
+                                            <p class="faq-sub-list-item-plain-heading">Water stains</p>
+                                            <p>To remove hard water stains from glass, rub with steel wool dipped in vinegar. Remove hard water stains from bathroom fixtures by applying a paste of baking soda and vinegar. Cover with a towel and let stand for an hour. Wipe off, rinse, and dry.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-plain">
+                                            <p class="faq-sub-list-item-plain-heading">Pet urine</p>
+                                            <p>Treat with commercial pet stain and odor remover. For cat urine, we recommend Nature’s Miracle, a product available at pet stores.</p>
+                                        </li>
+                                        <li class="faq-sub-list-item-plain">
+                                            <p class="faq-sub-list-item-plain-heading">Cigarette odor</p>
+                                            <p> Place bowls filled with vinegar, pine-scented cleaner, or activated charcoal around your home, out of the reach of children and pets. Close off the rooms overnight, if possible. Sprinkle baking soda on carpet and upholstery, leave overnight, then vacuum.</p>
+                                        </li>     
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+{% endblock  %}

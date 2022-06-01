@@ -5,14 +5,21 @@
     {% load static %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <script src="https://kit.fontawesome.com/50d678538c.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/50d678538c.js"
+      crossorigin="anonymous"
+    ></script>
     <!-- Compiled and minified CSS -->
 
     <link
       href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,500"
       rel="stylesheet"
     />
-    <link rel="stylesheet" type="text/css" href="{% static 'styles/css/style.css' %}" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'styles/css/style.css' %}"
+    />
   </head>
 
   <body>
@@ -31,22 +38,14 @@
         <ul class="navbar-mobile__links | active">
           <!-- Home link -->
           <li class="navbar-mobile__link">
-            <a href="" class="navbar-mobile__link-tag">
+            <a href="{% url 'home:index' %}" class="navbar-mobile__link-tag">
               <span class="navbar-mobile__link-icon">
                 <i class="fas fa-home"></i>
               </span>
               <span>Home</span>
             </a>
           </li>
-          <!-- Rates & Services link -->
-          <li class="navbar-mobile__link">
-            <a href="" class="navbar-mobile__link-tag">
-              <span class="navbar-mobile__link-icon">
-                <i class="fas fa-paint-brush"></i>
-              </span>
-              <span>Rates & Services</span>
-            </a>
-          </li>
+
           <!-- Contact Us link -->
           <li class="navbar-mobile__link">
             <a href="" class="navbar-mobile__link-tag">
@@ -67,7 +66,7 @@
           </li>
           <!-- FAQ link -->
           <li class="navbar-mobile__link">
-            <a href="" class="navbar-mobile__link-tag">
+            <a href="{% url 'faq:index' %}" class="navbar-mobile__link-tag">
               <span class="navbar-mobile__link-icon">
                 <i class="fas fa-question"></i>
               </span>
@@ -81,20 +80,44 @@
       <!-- Start of regular navbar -->
       <div class="navbar">
         <ul class="navbar__links">
+          <!-- Home link -->
           <li class="navbar__link">
-            <a href="" class="navbar__link-tag | navbar-home | enabled">Home</a>
+            <a
+              href="{% url 'home:index' %}"
+              class="navbar__link-tag | navbar-home | enabled"
+              >Home</a
+            >
           </li>
+          <!-- About us link -->
           <li class="navbar__link">
-            <a href="" class="navbar__link-tag | enabled">Rates & Services</a>
+            <a
+              href="{% url 'home:index' %}#section-b"
+              class="navbar__link-tag | disabled"
+              >About Us</a
+            >
           </li>
+          <!-- Prices link -->
           <li class="navbar__link">
-            <a href="" class="navbar__link-tag | disabled">Contact Us</a>
+            <a
+              href="{% url 'home:index' %}#section-d"
+              class="navbar__link-tag | disabled"
+              >Prices</a
+            >
           </li>
+          <!-- Contact Us link -->
           <li class="navbar__link">
-            <a href="" class="navbar__link-tag | disabled">About Us</a>
+            <a
+              href="{% url 'home:index' %}#section-e"
+              class="navbar__link-tag | disabled"
+              >Contact Us</a
+            >
           </li>
+
+          <!-- FAQ link -->
           <li class="navbar__link">
-            <a href="" class="navbar__link-tag | disabled">FAQ</a>
+            <a href="{% url 'faq:index' %}" class="navbar__link-tag | enabled"
+              >FAQ</a
+            >
           </li>
         </ul>
       </div>
@@ -124,12 +147,14 @@
               <a href="">About Us</a>
             </li>
             <li class="footer__links__link">
-              <a href="">FAQ</a>
+              <a href="{% url 'faq:index' %}">FAQ</a>
             </li>
           </ul>
         </div>
         <div class="footer-bottom">
-          <p class="terms-conditions">2020 Green Clean Home. All rights reserved.</p>
+          <p class="terms-conditions">
+            2020 Green Clean Home. All rights reserved.
+          </p>
           <p class="designed-by">
             Designed and developed by <span class="dev">prebenhesvik.com</span>
           </p>
@@ -140,10 +165,13 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.js"></script>
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    <!-- <script src="{% static 'scripts/click-scroll.js' %}"></script> -->
+    <script src="{% static 'scripts/click-scroll.js' %}"></script>
     <!-- <script src="{% static 'scripts/form-validation.js' %}"></script> -->
-    <!-- <script src="{% static 'scripts/submit-form.js' %}"></script> -->
+    <script src="{% static 'scripts/submit-form.js' %}"></script>
     <!-- <script type="text/javascript" src="{% static 'scripts/tabs.js' %}"></script> -->
-    <script type="text/javascript" src="{% static 'scripts/main.js' %}"></script>
+    <script
+      type="text/javascript"
+      src="{% static 'scripts/main.js' %}"
+    ></script>
   </body>
 </html>

@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\Preben\\Miniconda3\\envs\\GreenHomeClean\\python.exe"
+  "python.pythonPath": "C:\\Users\\Preben\\Miniconda3\\envs\\GreenHomeClean\\python.exe",
+  "esbonio.sphinx.confDir": ""
 }

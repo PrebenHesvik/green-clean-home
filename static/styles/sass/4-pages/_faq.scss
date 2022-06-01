@@ -1,0 +1,329 @@
+.container-faq {
+  text-align: left;
+  background-color: $bg-color-1;
+  position: relative;
+  padding: $large-spacing $medium-spacing;
+  @include breakpoint(viewport-7) {
+    padding: $xxl-spacing $large-spacing;
+    margin: 0 auto;
+  }
+  @include breakpoint(viewport-12) {
+    padding: 8% 10%;
+    margin: 0 auto;
+  }
+  @include breakpoint(viewport-16) {
+    max-width: 1600px;
+
+  .page-header {
+    margin: 0 auto;
+    color: $font-color-1;
+    background-color: $green-light;
+    padding: $medium-spacing;
+    border-radius: $medium-border-radius;
+    box-shadow: $secondary-box-shadow;
+
+    @include breakpoint(viewport-7) {
+      margin-top: $medium-spacing;
+    }
+    @include breakpoint(viewport-9) {
+      margin-bottom: $large-spacing;
+    }
+
+    .title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      @include breakpoint(viewport-4) {
+        font-size: 1.5rem;
+      }
+      @include breakpoint(viewport-7) {
+        font-size: 2rem;
+      }
+      @include breakpoint(viewport-9) {
+        font-size: 2.5rem;
+      }
+      @include breakpoint(viewport-12) {
+        font-size: 3rem;
+      }
+      @include breakpoint(viewport-14) {
+        font-size: 3rem;
+      }
+    }
+
+    .faq-header-text {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      @include breakpoint(viewport-7) {
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .faq-content {
+    display: block;
+    margin-top: $medium-spacing;
+    @include breakpoint(viewport-9) {
+      display: flex;
+    }
+  }
+
+  .navigation {
+    position: relative;
+    width: 100%;
+    z-index: z(dropdown);
+    @include breakpoint(viewport-9) {
+      width: 220px;
+    }
+
+    .mobile-faq-nav {
+      z-index: z(dropdown);
+      padding: $small-spacing $medium-spacing;
+      background: $green-light;
+      border-radius: $medium-border-radius;
+      box-shadow: $secondary-box-shadow;
+      @include breakpoint(viewport-9) {
+        display: none;
+      }
+    }
+    .active {
+      color: $accent-color-2 !important;
+    }
+
+    .drop-down-menu {
+      margin: auto;
+    }
+
+    .toggle-me {
+      width: 100%;
+      font-weight: 600;
+      color: $font-color-1;
+      font-size: 1.3rem;
+      @include flexbox;
+      @include justify-content(space-between);
+      @include align-items(center);
+      cursor: pointer;
+
+      @include breakpoint(viewport-4) {
+        font-size: 1.5rem;
+      }
+    }
+
+    .dropdown-items {
+      display: none;
+    }
+
+    .dropdown-item,
+    .dropped-down {
+      display: block !important;
+      padding: $base-spacing 0;
+      position: relative;
+      z-index: z(drop-down);
+      background: $green-light;
+      font-size: 1.5rem;
+
+      &:not(:first-child) {
+        border-top: 1px solid lighten($green-light, 5%);
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid darken($green-light, 10%);
+      }
+    }
+    .move-down {
+      transform: translateY(75px);
+    }
+
+    .fa-angle-down {
+      float: right;
+      color: $font-color-3;
+    }
+  }
+
+  .regular-faq-nav {
+    display: none;
+    @include breakpoint(viewport-9) {
+      background-color: $green-light;
+      padding: 2rem;
+      display: flex;
+      @include flex-direction(column);
+      top: 0;
+      left: 0;
+      position: absolute;
+    }
+    p {
+      color: $accent-color-2;
+      font-weight: 600;
+      font-size: 1.6rem;
+    }
+
+    .faq-category {
+      font-size: 1.3rem;
+      color: $font-color-1;
+      padding: $base-spacing 0;
+      font-weight: 550;
+
+      &:not(:first-child) {
+        border-top: 1px solid lighten($green-light, 5%);
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid darken($green-light, 10%);
+      }
+
+      a {
+        color: $font-color-1;
+      }
+      a:hover {
+        color: $accent-color-2;
+      }
+
+      @include breakpoint(viewport-9) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .questions {
+    z-index: 0;
+    width: 90%;
+    margin: $medium-spacing auto 0;
+    @include breakpoint(viewport-4) {
+      margin-top: $medium-spacing;
+    }
+    @include breakpoint(viewport-9) {
+      margin-top: 0px;
+      flex: 1;
+      margin-left: 50px;
+    }
+    @include breakpoint(viewport-14) {
+      //margin-left: 150px;
+    }
+    .question-category-list {
+      @include transform(translateZ(0));
+      @include transition(2.6s ease-in-out);
+    }
+    .question-category-list:not(.last) {
+      margin-bottom: 50px;
+    }
+    .question-category {
+      font-weight: 500;
+      margin-left: 44px;
+      color: $accent-color-2;
+      font-size: 1.5rem;
+    }
+    .question-answer {
+      border-bottom: 1px solid $primary-border-color;
+      padding: 40px 0 20px;
+      cursor: pointer;
+    }
+
+    .question {
+      display: flex;
+      padding: 0;
+      align-items: flex-start;
+      margin-bottom: $base-spacing;
+    }
+
+    .question-text {
+      font-size: 1.7rem;
+      padding: 0;
+      margin: 0;
+    }
+    .answer {
+      margin-left: 44px;
+      display: none;
+    }
+    .answer-text {
+      margin-bottom: $base-spacing;
+      font-weight: 300;
+      font-size: 1.4rem;
+
+      @include breakpoint(viewport-7) {
+        font-size: 1.6rem;
+      }
+    }
+
+    .faq-sub-list-item-bullet {
+      margin-bottom: $base-spacing;
+      @include flexbox;
+      @include align-items(flex-start);
+      .fa {
+        margin-right: 2rem;
+        margin-top: 5px;
+        color: $accent-color-1;
+      }
+
+      p {
+        font-size: 1.4rem;
+
+        @include breakpoint(viewport-7) {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .faq-sub-list {
+      margin-bottom: $medium-spacing;
+    }
+
+    .faq-sub-list-item-plain {
+      margin-bottom: 20px;
+      font-weight: 300;
+      font-size: inherit;
+    }
+    .faq-sub-list-item-plain-heading {
+      font-weight: 500;
+      font-size: modular-scale(-1);
+      margin-bottom: $xs-spacing;
+      @include breakpoint(viewport-14) {
+        font-size: modular-scale(0);
+        margin-bottom: $small-spacing;
+      }
+    }
+
+    .faq-sub-heading {
+      font-weight: 600;
+      font-size: modular-scale(-1);
+      margin-bottom: $xs-spacing;
+      @include breakpoint(viewport-14) {
+        font-size: modular-scale(0);
+        margin-bottom: $small-spacing;
+      }
+    }
+  }
+}
+
+.question-icon {
+  margin-right: 20px;
+  position: relative;
+  height: 26px;
+  width: 26px;
+  padding: 0;
+  margin-top: 7px;
+  cursor: pointer;
+  @include breakpoint(viewport-9) {
+    margin-top: 5px;
+  }
+
+  .plus-horizontal-line {
+    width: 23px;
+    height: 3px;
+    position: absolute;
+    top: 10px;
+    background: $accent-color-2;
+  }
+  .plus-vertical-line {
+    height: 23px;
+    width: 3px;
+    position: absolute;
+    left: 10px;
+    background: $accent-color-2;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+.vertical-closed {
+  transform: rotate(-90deg) !important;
+}
+.vertical-open {
+  transform: rotate(90deg) !important ;
+}

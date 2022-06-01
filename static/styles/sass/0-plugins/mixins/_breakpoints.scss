@@ -5,8 +5,13 @@
   $viewport-9: '(min-width: 992px)';
   $viewport-12: '(min-width: 1200px)';
   $viewport-14: '(min-width: 1400px)';
+  $viewport-16: '(min-width: 1600px)';
 
-  @if $point == viewport-14 {
+  @if $point == viewport-16 {
+    @media only screen and #{$viewport-16} {
+      @content;
+    }
+  } @else if $point == viewport-14 {
     @media only screen and #{$viewport-14} {
       @content;
     }

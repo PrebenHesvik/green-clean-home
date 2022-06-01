@@ -9,13 +9,13 @@ jQuery(document).ready(function () {
   });
 });
 
-//ADDS ACTIVE CLASS TO LINK ON CURRENT PAGE
+//=================  ADDS ACTIVE CLASS TO LINK ON CURRENT PAGE  =================
 $(function () {
   var domain = location.pathname;
   if (domain === '/') {
     $('.navbar-home').addClass('active');
   } else {
-    $('.navbar a[href^="/' + location.pathname.split('/')[1] + '"]')
+    $('.navbar__link a[href^="/' + location.pathname.split('/')[1] + '"]')
       .not('.disabled')
       .addClass('active');
   }
@@ -52,7 +52,7 @@ $.ajaxSetup({
   },
 });
 
-//Ajax call to update price when changing a drop down list in Pricing section
+//=================  AJAX CALL FOR UPDATING PRICE   =================
 $('.get-quote').click(function () {
   event.preventDefault();
   var house_type = $('#house-type').find(':selected').text();
@@ -80,7 +80,23 @@ $('.get-quote').click(function () {
   });
 });
 
-//set select tags in Pricing to original values when refreshing
+//============  DYNAMICALLY CHANGE BACKGROUND COLOR OF NAVAR ELEMENTS DEPENDING ON BACKGROUND COLOR   =========
+var rgb = $('.container-faq')
+  .css('background-color')
+  .replace('rgb(', '')
+  .replace(')', '')
+  .split(',')
+  .map(Number);
+var o = Math.round((rgb[0] * 299 + rgb[1] * 587 + rgb[2] * 114) / 1000);
+if (o > 125) {
+  $('.navbar ul > li > a').css('color', 'black');
+  $('nav > .toggle-nav').css('color', 'black');
+} else {
+  $('.navbar ul > li > a').css('color', 'white');
+  $('.navbar-default .navbar-toggle .icon-bar').css('color', 'white');
+}
+
+//============  SET SELECT TAGS IN PRICING TO ORIGINAL VALUES WHEN REFRESHING   =========
 document.getElementsByTagName('select')[0].selectedIndex = 0;
 document.getElementsByTagName('select')[1].selectedIndex = 0;
 document.getElementsByTagName('select')[2].selectedIndex = 0;

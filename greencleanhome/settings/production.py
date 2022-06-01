@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG", False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["greencleanhome.herokuapp.com"]
 
 
 # Application definition
@@ -46,9 +46,9 @@ PREREQ_APPS = [
     "django.contrib.staticfiles",
 ]
 
-PROJECT_APPS = ["home"]
+PROJECT_APPS = ["home", "faq"]
 
-THIRD_PARTY_APPS = ["storages"]
+THIRD_PARTY_APPS = ["storages", "requests"]
 
 INSTALLED_APPS = PREREQ_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
@@ -75,6 +75,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "home.context_processors.phone_number",
+                "home.context_processors.email",
             ],
         },
     },
@@ -179,6 +181,4 @@ SECURE_HSTS_SECONDS = 1000000
 SECURE_FRAME_DENY = True
 
 django_heroku.settings(locals())
-
-# GOOGLE RECAPTCHA
-GOOGLE_RECAPTCHA_SECRET_KEY = os.environ.get("GreenHomeGoogleRecaptcha")
+GOOGLE_DATA_SITE_KEY = os.environ.get("GOOGLE_DATA_SITE_KEY")
