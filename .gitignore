@@ -1,6 +1,9 @@
 # environment variables
 .env
 
+.vscode
+prepros.config
+
 # Django #
 *.log
 *.pot
