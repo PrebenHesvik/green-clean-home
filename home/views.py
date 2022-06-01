@@ -65,9 +65,9 @@ def submit_form(request):
             "secret": settings.GOOGLE_RECAPTCHA_SECRET_KEY,
             "response": recaptcha_response,
         }
+
         r = requests.post("https://www.google.com/recaptcha/api/siteverify", data=data)
         result = r.json()
-        """ End reCAPTCHA validation """
 
         if result["success"]:
             form_name = name
@@ -91,7 +91,6 @@ def submit_form(request):
 
 @csrf_exempt
 def calc_price(request):
-    data = dict()
     template = "home/includes/price.html"
 
     house_type = request.POST.get("house_type")
@@ -99,11 +98,8 @@ def calc_price(request):
     cleaning_type = request.POST.get("cleaning_type")
 
     price = calculator(house_type, bathrooms, cleaning_type)
-
     context = {"price": price}
-
-    data["html"] = render_to_string(template, context)
-    print(data)
+    data = {"html": render_to_string(template, context)}
 
     return JsonResponse(data)
 
